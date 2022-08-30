@@ -54870,6 +54870,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31eaed7d659e040cd811525c3769df57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movementInput: {x: 0, y: 0}
+  movementVector: {x: 0, y: 0, z: 0}
+  _inputReader: {fileID: 11400000, guid: 26a38b2bdc1784e95bef15cf131d2ae2, type: 2}
 --- !u!114 &305115772
 MonoBehaviour:
   m_ObjectHideFlags: 0

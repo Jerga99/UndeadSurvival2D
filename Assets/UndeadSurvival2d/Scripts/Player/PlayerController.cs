@@ -6,6 +6,8 @@ namespace Eincode.UndeadSurvival2d.Player
 {
     public class PlayerController : MonoBehaviour
     {
+        public Vector2 movementInput;
+        public Vector3 movementVector;
 
         [SerializeField]
         private InputReader _inputReader;
@@ -23,16 +25,26 @@ namespace Eincode.UndeadSurvival2d.Player
         // Update is called once per frame
         void Update()
         {
-            transform.position = new Vector3(
-                transform.position.x,
-                transform.position.y - Time.deltaTime * 2,
-                transform.position.z
-            );
+            ComputeMovement();
+            Move();
+        }
+
+        private void Move()
+        {
+            transform.position += movementVector;
+        }
+
+        private void ComputeMovement()
+        {
+            float targetSpeed = 2;
+
+            var move = new Vector3(movementInput.x, movementInput.y, 0);
+            movementVector = targetSpeed * Time.deltaTime * move;
         }
 
         private void OnMoveEvent(Vector2 move)
         {
-            Debug.Log("OnMoveEvent: " + move);
+            movementInput = move;
         }
     }
 }
