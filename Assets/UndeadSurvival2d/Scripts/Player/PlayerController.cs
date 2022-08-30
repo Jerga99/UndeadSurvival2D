@@ -1,14 +1,23 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Eincode.UndeadSurvival2d.Input;
 
 namespace Eincode.UndeadSurvival2d.Player
 {
     public class PlayerController : MonoBehaviour
     {
-        // Use this for initialization
-        void Start()
+
+        [SerializeField]
+        private InputReader _inputReader;
+
+        private void OnEnable()
         {
-            Debug.Log("Init Player Controller");
+            _inputReader.MoveEvent += OnMoveEvent;
+        }
+
+        private void OnDisable()
+        {
+            _inputReader.MoveEvent -= OnMoveEvent;
         }
 
         // Update is called once per frame
@@ -19,6 +28,11 @@ namespace Eincode.UndeadSurvival2d.Player
                 transform.position.y - Time.deltaTime * 2,
                 transform.position.z
             );
+        }
+
+        private void OnMoveEvent(Vector2 move)
+        {
+            Debug.Log("OnMoveEvent: " + move);
         }
     }
 }
