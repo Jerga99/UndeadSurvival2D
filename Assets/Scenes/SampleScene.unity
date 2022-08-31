@@ -54835,6 +54835,7 @@ GameObject:
   - component: {fileID: 305115771}
   - component: {fileID: 305115772}
   - component: {fileID: 305115773}
+  - component: {fileID: 305115774}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -54873,6 +54874,7 @@ MonoBehaviour:
   TargetSpeed: 2
   movementInput: {x: 0, y: 0}
   movementVector: {x: 0, y: 0, z: 0}
+  movementBlend: 0
   _inputReader: {fileID: 11400000, guid: 26a38b2bdc1784e95bef15cf131d2ae2, type: 2}
 --- !u!114 &305115772
 MonoBehaviour:
@@ -54918,6 +54920,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _inputReader: {fileID: 11400000, guid: 26a38b2bdc1784e95bef15cf131d2ae2, type: 2}
+--- !u!114 &305115774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305115769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4dd15505604e4c92a64b034dd118a13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
