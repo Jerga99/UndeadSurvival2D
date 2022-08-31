@@ -6,6 +6,8 @@ namespace Eincode.UndeadSurvival2d.Player
 {
     public class PlayerController : MonoBehaviour
     {
+        public float TargetSpeed;
+
         public Vector2 movementInput;
         public Vector3 movementVector;
 
@@ -36,10 +38,8 @@ namespace Eincode.UndeadSurvival2d.Player
 
         private void ComputeMovement()
         {
-            float targetSpeed = 2;
-
             var move = new Vector3(movementInput.x, movementInput.y, 0);
-            movementVector = targetSpeed * Time.deltaTime * move;
+            movementVector = TargetSpeed * Time.deltaTime * move;
         }
 
         private void OnMoveEvent(Vector2 move)
