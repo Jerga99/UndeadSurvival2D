@@ -1,16 +1,17 @@
 ﻿using UnityEngine;
-using System.Collections;
+using Eincode.UndeadSurvival2d.Character;
 
 namespace Eincode.UndeadSurvival2d.Player
 {
-    public class PlayerBehaviour : MonoBehaviour
+    public class PlayerBehaviour : CharacterBehaviour
     {
         private PlayerController _playerController;
         private Animator _animator;
 
         // Use this for initialization
-        void Start()
+        new void Start()
         {
+            base.Start();
             _playerController = GetComponent<PlayerController>();
             _animator = GetComponentInChildren<Animator>();
         }
