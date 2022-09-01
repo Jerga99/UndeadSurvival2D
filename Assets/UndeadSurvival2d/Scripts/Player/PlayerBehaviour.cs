@@ -19,6 +19,12 @@ namespace Eincode.UndeadSurvival2d.Player
         // Update is called once per frame
         void Update()
         {
+            if (_playerController.movementInput.x < 0 && !isFacingLeft ||
+                _playerController.movementInput.x > 0 && isFacingLeft)
+            {
+                Flip();
+            }
+
             var speed = Mathf.Round(_playerController.movementBlend * 100f) / 100f;
             _animator.SetFloat("Speed", speed);
         }

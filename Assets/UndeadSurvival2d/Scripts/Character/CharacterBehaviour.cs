@@ -5,12 +5,17 @@ namespace Eincode.UndeadSurvival2d.Character
 {
     public class CharacterBehaviour : MonoBehaviour
     {
-        protected SpriteRenderer _sprite;
+        public bool isFacingLeft = default;
+        private SpriteRenderer _sprite;
 
         protected void Start()
         {
             _sprite = GetComponentInChildren<SpriteRenderer>();
-            _sprite.flipX = true;
+        }
+
+        protected void Flip()
+        {
+            isFacingLeft = _sprite.flipX = !_sprite.flipX;
         }
     }
 }
