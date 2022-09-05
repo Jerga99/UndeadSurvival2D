@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 
-namespace Eincode.UndeadSurvival2d.Scriptable
+namespace Eincode.UndeadSurvival2d.StateMachine.Scriptable
 {
     [CreateAssetMenu(fileName = "StateSO", menuName = "StateMachine/New State")]
     public class StateSO : ScriptableObject
@@ -9,11 +9,6 @@ namespace Eincode.UndeadSurvival2d.Scriptable
         public string Name;
     }
 
-
-    public class State
-    {
-
-    }
-
-
 }
+
+

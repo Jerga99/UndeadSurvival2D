@@ -1,10 +1,9 @@
 ﻿using UnityEngine;
-using System.Collections;
-using Eincode.UndeadSurvival2d.Scriptable;
+using Eincode.UndeadSurvival2d.StateMachine.Scriptable;
 
 namespace Eincode.UndeadSurvival2d.StateMachine
 {
-    public class StateMachine : MonoBehaviour
+    public class StateMachineCore : MonoBehaviour
     {
         [SerializeField]
         private StateSO[] _statesSO;
