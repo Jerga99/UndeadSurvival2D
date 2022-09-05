@@ -8,17 +8,19 @@ namespace Eincode.UndeadSurvival2d.StateMachine
         [SerializeField]
         private StateSO[] _statesSO;
 
+        private State _activeState;
+
         // Use this for initialization
         void Start()
         {
-            Debug.Log("Init StateMachine");
-            Debug.Log(_statesSO[0].Name);
+            _activeState = _statesSO[0].GetState();
+            _activeState.OnEnter();
         }
 
         // Update is called once per frame
         void Update()
         {
-
+            _activeState.OnUpdate();
         }
     }
 

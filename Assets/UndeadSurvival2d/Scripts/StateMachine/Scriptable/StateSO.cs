@@ -7,6 +7,14 @@ namespace Eincode.UndeadSurvival2d.StateMachine.Scriptable
     public class StateSO : ScriptableObject
     {
         public string Name;
+
+        public State GetState()
+        {
+            var state = new State();
+            state.originSO = this;
+
+            return state;
+        }
     }
 
 }
