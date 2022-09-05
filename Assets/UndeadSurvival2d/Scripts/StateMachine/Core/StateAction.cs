@@ -8,8 +8,8 @@ namespace Eincode.UndeadSurvival2d.StateMachine
     {
         public StateActionSO originSO;
 
-        public void OnEnter() { }
-        public void OnExit() { }
-        public void OnUpdate() { }
+        public virtual void OnEnter() { }
+        public virtual void OnExit() { }
+        public virtual void OnUpdate() { }
     }
 }

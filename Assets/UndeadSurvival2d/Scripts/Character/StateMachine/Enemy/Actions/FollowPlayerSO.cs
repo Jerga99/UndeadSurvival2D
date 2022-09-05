@@ -18,5 +18,12 @@ public class FollowPlayerSO : StateActionSO
 
 public class FollowPlayer : StateAction
 {
+
+    public override void OnEnter() { }
+    public override void OnExit() { }
+    public override void OnUpdate()
+    {
+        Debug.Log("Calling Update of FollowPlayer");
+    }
 }
 
