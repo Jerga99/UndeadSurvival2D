@@ -8,19 +8,32 @@ namespace Eincode.UndeadSurvival2d.StateMachine
         [SerializeField]
         private StateSO[] _statesSO;
 
-        private State _activeState;
+        private State[] _states;
+        private int _currentState;
 
-        // Use this for initialization
         void Start()
         {
-            _activeState = _statesSO[0].GetState();
-            _activeState.OnEnter();
+            _currentState = 0;
+            InitialStates();
+            _states[_currentState].OnEnter();
         }
 
-        // Update is called once per frame
         void Update()
         {
-            _activeState.OnUpdate();
+            var currentState = _states[_currentState];
+            currentState.OnUpdate();
+        }
+
+        private void InitialStates()
+        {
+            var stateLength = _statesSO.Length;
+            _states = new State[stateLength];
+
+            for (var i = 0; i < stateLength; i++)
+            {
+                var state = _statesSO[i].GetState();
+                _states[i] = state;
+            }
         }
     }
 
