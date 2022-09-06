@@ -11,6 +11,8 @@ using Eincode.UndeadSurvival2d.Manager;
     menuName = "StateMachine/Enemy/Actions/Follow Player")]
 public class FollowPlayerSO : StateActionSO
 {
+    public float SpeedModifier;
+
     public override StateAction CreateAction()
     {
         return new FollowPlayer();
@@ -19,6 +21,8 @@ public class FollowPlayerSO : StateActionSO
 
 public class FollowPlayer : StateAction
 {
+    public FollowPlayerSO OriginSO => (FollowPlayerSO)originSO;
+
     public Vector3 PlayerPosition => GameManager.Instance.GetPlayer().transform.position;
     public Vector3 MyPosition => _myTransform.position;
 
@@ -42,7 +46,7 @@ public class FollowPlayer : StateAction
         _myTransform.position = Vector3.MoveTowards(
             MyPosition,
             PlayerPosition,
-            Time.deltaTime
+            Time.deltaTime * OriginSO.SpeedModifier
         );
     }
 }
