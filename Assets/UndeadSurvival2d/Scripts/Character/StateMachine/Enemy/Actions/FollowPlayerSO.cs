@@ -4,6 +4,7 @@
 using UnityEngine;
 using Eincode.UndeadSurvival2d.StateMachine;
 using Eincode.UndeadSurvival2d.StateMachine.Scriptable;
+using Eincode.UndeadSurvival2d.Manager;
 
 [CreateAssetMenu(
     fileName = "FollowPlayerSO",
@@ -23,6 +24,7 @@ public class FollowPlayer : StateAction
     public override void Awake(StateMachineCore stateMachine)
     {
         _myTransform = stateMachine.transform;
+
     }
 
     public override void OnEnter() { }
