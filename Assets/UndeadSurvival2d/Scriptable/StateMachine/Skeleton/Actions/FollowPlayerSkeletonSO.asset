@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc6649579769e4ba5a59b8f47c85d01f, type: 3}
   m_Name: FollowPlayerSkeletonSO
   m_EditorClassIdentifier: 
+  SpeedModifier: 0.9
