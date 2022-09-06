@@ -31,7 +31,7 @@ namespace Eincode.UndeadSurvival2d.StateMachine
 
             for (var i = 0; i < stateLength; i++)
             {
-                var state = _statesSO[i].GetState();
+                var state = _statesSO[i].GetState(this);
                 _states[i] = state;
             }
         }

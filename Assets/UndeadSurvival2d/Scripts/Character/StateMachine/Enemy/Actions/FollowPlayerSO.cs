@@ -18,12 +18,18 @@ public class FollowPlayerSO : StateActionSO
 
 public class FollowPlayer : StateAction
 {
+    private Transform _myTransform;
+
+    public override void Awake(StateMachineCore stateMachine)
+    {
+        _myTransform = stateMachine.transform;
+    }
 
     public override void OnEnter() { }
     public override void OnExit() { }
     public override void OnUpdate()
     {
-        Debug.Log("Calling Update of FollowPlayer");
+        Debug.Log("Enemy Position: " + _myTransform.position);
     }
 }
 
