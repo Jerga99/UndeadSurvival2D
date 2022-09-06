@@ -34,8 +34,16 @@ public class FollowPlayer : StateAction
     public override void OnExit() { }
     public override void OnUpdate()
     {
-        Debug.Log("Enemy Position: " + MyPosition);
-        Debug.Log("Player Position: " + PlayerPosition);
+        RunAction();
+    }
+
+    private void RunAction()
+    {
+        _myTransform.position = Vector3.MoveTowards(
+            MyPosition,
+            PlayerPosition,
+            Time.deltaTime
+        );
     }
 }
 
