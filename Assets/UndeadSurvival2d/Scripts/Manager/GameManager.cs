@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using Eincode.UndeadSurvival2d.Player;
 
 namespace Eincode.UndeadSurvival2d.Manager
 {
@@ -6,6 +7,8 @@ namespace Eincode.UndeadSurvival2d.Manager
     {
         public static GameManager Instance { get; private set; }
 
+        [SerializeField]
+        private PlayerBehaviour _player;
 
         private void Awake()
         {
@@ -17,6 +20,11 @@ namespace Eincode.UndeadSurvival2d.Manager
             {
                 Destroy(gameObject);
             }
+        }
+
+        public PlayerBehaviour GetPlayer()
+        {
+            return _player;
         }
     }
 

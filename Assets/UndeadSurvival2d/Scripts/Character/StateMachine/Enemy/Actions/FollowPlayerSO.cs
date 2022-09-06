@@ -19,6 +19,9 @@ public class FollowPlayerSO : StateActionSO
 
 public class FollowPlayer : StateAction
 {
+    public Vector3 PlayerPosition => GameManager.Instance.GetPlayer().transform.position;
+    public Vector3 MyPosition => _myTransform.position;
+
     private Transform _myTransform;
 
     public override void Awake(StateMachineCore stateMachine)
@@ -31,7 +34,8 @@ public class FollowPlayer : StateAction
     public override void OnExit() { }
     public override void OnUpdate()
     {
-        Debug.Log("Enemy Position: " + _myTransform.position);
+        Debug.Log("Enemy Position: " + MyPosition);
+        Debug.Log("Player Position: " + PlayerPosition);
     }
 }
 
