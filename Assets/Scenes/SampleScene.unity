@@ -54845,6 +54845,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemySkeleton (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5172782195943258503, guid: ab3201e6db5e2450c85990394c105b02,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab3201e6db5e2450c85990394c105b02, type: 3}
 --- !u!1 &284711667
@@ -55025,12 +55030,12 @@ PrefabInstance:
     - target: {fileID: 5172782195943258502, guid: ab3201e6db5e2450c85990394c105b02,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.087
+      value: -2.479
       objectReference: {fileID: 0}
     - target: {fileID: 5172782195943258502, guid: ab3201e6db5e2450c85990394c105b02,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.66
+      value: 2.336
       objectReference: {fileID: 0}
     - target: {fileID: 5172782195943258502, guid: ab3201e6db5e2450c85990394c105b02,
         type: 3}
@@ -55076,6 +55081,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EnemySkeleton (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5172782195943258503, guid: ab3201e6db5e2450c85990394c105b02,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab3201e6db5e2450c85990394c105b02, type: 3}
@@ -55177,12 +55187,12 @@ PrefabInstance:
     - target: {fileID: 5172782195943258502, guid: ab3201e6db5e2450c85990394c105b02,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.604
+      value: -1.584
       objectReference: {fileID: 0}
     - target: {fileID: 5172782195943258502, guid: ab3201e6db5e2450c85990394c105b02,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.655
+      value: 1.805
       objectReference: {fileID: 0}
     - target: {fileID: 5172782195943258502, guid: ab3201e6db5e2450c85990394c105b02,
         type: 3}

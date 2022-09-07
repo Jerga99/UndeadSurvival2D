@@ -154,6 +154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFacingLeft: 0
+  CollisionTag: Player
 --- !u!114 &2475561260305359953
 MonoBehaviour:
   m_ObjectHideFlags: 0

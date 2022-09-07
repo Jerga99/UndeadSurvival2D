@@ -6,17 +6,29 @@ namespace Eincode.UndeadSurvival2d.Enemy
 {
     public class EnemyBehaviour : CharacterBehaviour
     {
+        public string CollisionTag;
+
         new void Start()
         {
             base.Start();
-            Debug.Log("Init EnemyBehaviour");
         }
 
-        void Update()
+
+        private void OnCollisionEnter2D(Collision2D collision)
         {
-
+            if (collision.gameObject.CompareTag(CollisionTag))
+            {
+                Debug.Log("CollisionEnter!");
+            }
         }
+
+        private void OnCollisionExit2D(Collision2D collision)
+        {
+            if (collision.gameObject.CompareTag(CollisionTag))
+            {
+                Debug.Log("CollisionExit!");
+            }
+        }
+
     }
-
-
 }
