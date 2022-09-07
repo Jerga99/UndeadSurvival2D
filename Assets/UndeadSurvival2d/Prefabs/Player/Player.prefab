@@ -118,6 +118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73d8a6431ae4d418487e6e05feadf79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Duration: 0.3
   flashMaterial: {fileID: 2100000, guid: 5bf282dde312e428eab7a26eae8e8a42, type: 2}
 --- !u!1 &6732985410455250750
 GameObject:
