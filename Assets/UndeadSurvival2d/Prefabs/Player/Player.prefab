@@ -245,6 +245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f64aa2066d05844a0b886e300c99fea5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FlashDamageColor: {r: 1, g: 0.23488599, b: 0.0990566, a: 1}
 --- !u!70 &6732985410455250744
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

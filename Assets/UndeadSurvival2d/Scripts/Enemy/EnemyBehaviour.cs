@@ -48,6 +48,7 @@ namespace Eincode.UndeadSurvival2d.Enemy
             if (collision.gameObject.CompareTag(CollisionTag))
             {
                 _closeTarget = null;
+                _damageTimer = DamageInterval;
             }
         }
 

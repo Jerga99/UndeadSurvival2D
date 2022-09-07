@@ -20,20 +20,21 @@ namespace Eincode.UndeadSurvival2d.Utils
             flashMaterial = new Material(flashMaterial);
         }
 
-        public void Flash()
+        public void Flash(Color color)
         {
             if (_flashRoutine != null)
             {
                 StopCoroutine(_flashRoutine);
             }
 
-            _flashRoutine = StartCoroutine(FlashRoutine());
+            _flashRoutine = StartCoroutine(FlashRoutine(color));
         }
 
 
-        private IEnumerator FlashRoutine()
+        private IEnumerator FlashRoutine(Color color)
         {
             _spriteRenderer.material = flashMaterial;
+            flashMaterial.color = color;
 
             yield return new WaitForSeconds(Duration);
 

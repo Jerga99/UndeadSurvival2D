@@ -6,6 +6,7 @@ namespace Eincode.UndeadSurvival2d.Character
 {
     public class Damageable : MonoBehaviour
     {
+        public Color FlashDamageColor;
 
         private SpriteFlash _flashDamageEffect;
 
@@ -27,7 +28,7 @@ namespace Eincode.UndeadSurvival2d.Character
 
             if (_flashDamageEffect != null)
             {
-                _flashDamageEffect.Flash();
+                _flashDamageEffect.Flash(FlashDamageColor);
             }
         }
     }
