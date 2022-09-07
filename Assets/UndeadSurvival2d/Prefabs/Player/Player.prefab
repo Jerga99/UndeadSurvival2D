@@ -118,6 +118,7 @@ GameObject:
   - component: {fileID: 6732985410455250747}
   - component: {fileID: 6732985410455250746}
   - component: {fileID: 6732985410455250745}
+  - component: {fileID: 274070393328565767}
   - component: {fileID: 6732985410455250744}
   - component: {fileID: 6732985410455250887}
   m_Layer: 0
@@ -217,6 +218,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFacingLeft: 0
+--- !u!114 &274070393328565767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6732985410455250750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f64aa2066d05844a0b886e300c99fea5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!70 &6732985410455250744
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
