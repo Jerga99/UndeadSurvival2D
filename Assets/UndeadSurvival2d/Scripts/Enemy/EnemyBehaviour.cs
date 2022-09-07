@@ -7,19 +7,28 @@ namespace Eincode.UndeadSurvival2d.Enemy
     public class EnemyBehaviour : CharacterBehaviour
     {
         public string CollisionTag;
+        public float DamageInterval;
 
         private Damageable _closeTarget;
+        private float _damageTimer;
 
         new void Start()
         {
             base.Start();
+            _damageTimer = DamageInterval;
         }
 
         private void Update()
         {
             if (_closeTarget)
             {
-                _closeTarget.TakeDamage(10);
+                _damageTimer += Time.deltaTime;
+
+                if (_damageTimer >= DamageInterval)
+                {
+                    _closeTarget.TakeDamage(10);
+                    _damageTimer = 0;
+                }
             }
         }
 
