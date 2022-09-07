@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: FollowPlayerSkeletonSO
   m_EditorClassIdentifier: 
   SpeedModifier: 0.9
+  DistanceToKeep: 0.1

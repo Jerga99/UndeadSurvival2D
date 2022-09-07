@@ -12,6 +12,7 @@ using Eincode.UndeadSurvival2d.Manager;
 public class FollowPlayerSO : StateActionSO
 {
     public float SpeedModifier;
+    public float DistanceToKeep;
 
     public override StateAction CreateAction()
     {
@@ -43,6 +44,11 @@ public class FollowPlayer : StateAction
 
     private void RunAction()
     {
+        if (Vector3.Distance(MyPosition, PlayerPosition) <= OriginSO.DistanceToKeep)
+        {
+            return;
+        }
+
         _myTransform.position = Vector3.MoveTowards(
             MyPosition,
             PlayerPosition,
