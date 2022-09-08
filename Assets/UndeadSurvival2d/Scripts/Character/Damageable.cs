@@ -7,6 +7,7 @@ namespace Eincode.UndeadSurvival2d.Character
     public class Damageable : MonoBehaviour
     {
         public Color FlashDamageColor;
+        public ParticleSystem ParticleHitEffect;
 
         private SpriteFlash _flashDamageEffect;
 
@@ -24,7 +25,10 @@ namespace Eincode.UndeadSurvival2d.Character
 
         public void TakeDamage(int damage)
         {
-            Debug.Log("Taking Damage of: " + damage);
+            if (ParticleHitEffect != null)
+            {
+                ParticleHitEffect.Play();
+            }
 
             if (_flashDamageEffect != null)
             {

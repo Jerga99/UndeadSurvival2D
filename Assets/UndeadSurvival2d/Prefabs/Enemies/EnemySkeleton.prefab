@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 2475561260305359952, guid: d56c6924536bd4b748911b528b35817e,
         type: 3}
       propertyPath: DamageInterval
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2475561260305359958, guid: d56c6924536bd4b748911b528b35817e,
         type: 3}
