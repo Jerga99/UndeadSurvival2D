@@ -13,7 +13,7 @@ namespace Eincode.UndeadSurvival2d.Character
             _sprite = GetComponentInChildren<SpriteRenderer>();
         }
 
-        protected void Flip()
+        public void Flip()
         {
             isFacingLeft = _sprite.flipX = !_sprite.flipX;
         }
