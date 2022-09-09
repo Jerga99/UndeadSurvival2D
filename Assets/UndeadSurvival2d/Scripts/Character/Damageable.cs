@@ -38,6 +38,8 @@ namespace Eincode.UndeadSurvival2d.Character
 
         public void TakeDamage(int damage)
         {
+            _healthSO.InflictDamage(damage);
+
             if (ParticleHitEffect != null)
             {
                 ParticleHitEffect.Play();

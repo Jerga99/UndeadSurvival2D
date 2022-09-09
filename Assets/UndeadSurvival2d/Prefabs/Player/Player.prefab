@@ -5088,7 +5088,7 @@ GameObject:
   - component: {fileID: 1582976147197378579}
   - component: {fileID: 4634343235589108632}
   - component: {fileID: 6861917821366219595}
-  - component: {fileID: 8087348741108283789}
+  - component: {fileID: 5464715510348296705}
   m_Layer: 5
   m_Name: HealthBarCanvas
   m_TagString: Untagged
@@ -5178,7 +5178,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &8087348741108283789
+--- !u!114 &5464715510348296705
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5187,10 +5187,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5715042922305850522}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9631f1d3e2284a0d9f621cb90f4c8bc, type: 3}
+  m_Script: {fileID: 11500000, guid: 245e3210451fe4728b018da1e934362a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Slider: {fileID: 8791267486835867377}
+  _healthSO: {fileID: 11400000, guid: 10d53b838c1f347f88d6380958674b6f, type: 2}
 --- !u!1 &6732985409673922113
 GameObject:
   m_ObjectHideFlags: 0
