@@ -72,5 +72,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemySkeleton
       objectReference: {fileID: 0}
+    - target: {fileID: 6714431553381430090, guid: d56c6924536bd4b748911b528b35817e,
+        type: 3}
+      propertyPath: _initialHealthSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 9c61f6158a9ac4c83a0c8d100d4856da,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d56c6924536bd4b748911b528b35817e, type: 3}

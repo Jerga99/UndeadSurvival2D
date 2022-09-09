@@ -185,6 +185,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FlashDamageColor: {r: 0, g: 0, b: 0, a: 0}
   ParticleHitEffect: {fileID: 0}
+  _initialHealthSO: {fileID: 11400000, guid: 5d12ced87addb4e0f82b56df3ab4f310, type: 2}
+  _healthSO: {fileID: 0}
 --- !u!70 &2475561260305359955
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

@@ -5027,7 +5027,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 2428232860942943486}
   m_FillRect: {fileID: 3801978950970783429}
   m_HandleRect: {fileID: 0}
   m_Direction: 0
@@ -5426,6 +5426,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FlashDamageColor: {r: 1, g: 0.23488599, b: 0.0990566, a: 1}
   ParticleHitEffect: {fileID: 5523653078901781384}
+  _initialHealthSO: {fileID: 11400000, guid: ca2f71834323d408fb2b4feb23295575, type: 2}
+  _healthSO: {fileID: 11400000, guid: 10d53b838c1f347f88d6380958674b6f, type: 2}
 --- !u!70 &6732985410455250744
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
