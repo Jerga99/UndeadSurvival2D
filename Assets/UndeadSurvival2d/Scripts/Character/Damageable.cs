@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using Eincode.UndeadSurvival2d.Utils;
+using Eincode.UndeadSurvival2d.Manager;
 
 namespace Eincode.UndeadSurvival2d.Character
 {
@@ -34,11 +35,15 @@ namespace Eincode.UndeadSurvival2d.Character
         void Start()
         {
             _flashDamageEffect = GetComponentInChildren<SpriteFlash>();
+
+            UIManager.Instance.ShowDamage(100, transform);
         }
 
         public void TakeDamage(int damage)
         {
             _healthSO.InflictDamage(damage);
+
+            UIManager.Instance.ShowDamage(damage, transform);
 
             if (ParticleHitEffect != null)
             {

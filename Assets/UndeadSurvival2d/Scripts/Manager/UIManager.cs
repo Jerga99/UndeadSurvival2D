@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using Eincode.UndeadSurvival2d.UI;
 
 namespace Eincode.UndeadSurvival2d.Manager
 {
@@ -21,9 +22,12 @@ namespace Eincode.UndeadSurvival2d.Manager
             }
         }
 
-        private void Start()
+        public void ShowDamage(int damage, Transform target)
         {
-            Instantiate(DamageTextPrefab, DamageCanvas.transform);
+            var damageGO = Instantiate(DamageTextPrefab, DamageCanvas.transform);
+            var damageDisplay = damageGO.GetComponent<DamageDisplay>();
+
+            damageDisplay.ShowDamage(damage, target, DamageCanvas);
         }
     }
 }
