@@ -28,6 +28,8 @@ public class MeleeAttack : Ability
     {
         var ability = InstantiateAbility(runner);
         ability.transform.parent = runner.transform;
+
+        Debug.Log("Cooldown is: " + originSO.Cooldown);
     }
 
     public override void Run()

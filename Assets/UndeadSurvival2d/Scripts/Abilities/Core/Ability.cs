@@ -8,6 +8,7 @@ namespace Eincode.UndeadSurvival2d.Abilities
     public abstract class Ability
     {
         public AbilitySO originSO;
+        public float overallCooldown;
 
         public abstract void TriggerAbility(AbilityRunner runner);
 
