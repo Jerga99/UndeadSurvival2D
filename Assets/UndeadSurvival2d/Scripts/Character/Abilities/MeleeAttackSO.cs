@@ -30,6 +30,7 @@ public class MeleeAttack : Ability
     public override void Run()
     {
         base.Run();
+        Debug.Log("Casting Melee Attack!");
     }
 }
 
