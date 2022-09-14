@@ -27,6 +27,7 @@ public class MeleeAttack : Ability
     public override void TriggerAbility(AbilityRunner runner)
     {
         var ability = InstantiateAbility(runner);
+        ability.transform.parent = runner.transform;
     }
 
     public override void Run()
