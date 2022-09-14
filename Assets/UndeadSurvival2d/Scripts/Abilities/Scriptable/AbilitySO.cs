@@ -6,6 +6,7 @@ namespace Eincode.UndeadSurvival2d.Abilities.Scriptable
 {
     public abstract class AbilitySO : ScriptableObject
     {
+        public string Name;
 
         public virtual Ability GetAbility(MonoBehaviour runner)
         {
