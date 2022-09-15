@@ -15,3 +15,4 @@ MonoBehaviour:
   AbilityPrefab: {fileID: 7829502221116847059, guid: f3c4b4e97e5404e9e995349e4cb89a38,
     type: 3}
   Name: MeleeAttack
+  _cooldown: {fileID: 11400000, guid: 1c252a874077d49e29d6fb4c44dc8cfd, type: 2}

@@ -20,15 +20,21 @@ namespace Eincode.UndeadSurvival2d.Abilities
             {
                 PrepareAbility(abilitySO);
             }
-
-            foreach (var ability in _abilities)
-            {
-                ability.Run();
-            }
         }
 
         void Update()
         {
+            foreach (var ability in _abilities)
+            {
+                if (ability.IsCooldownPending)
+                {
+                    ability.Cooldown();
+                }
+                else
+                {
+                    ability.Run();
+                }
+            }
         }
 
         private void PrepareAbility(AbilitySO abilitySO)
