@@ -18,6 +18,8 @@ public class MeleeAttackSO : AbilitySO
 
 public class MeleeAttack : Ability
 {
+    private GameObject _abilityGO;
+
     public override void Awake(AbilityRunner runner)
     {
         base.Awake(runner);
@@ -26,16 +28,14 @@ public class MeleeAttack : Ability
 
     public override void TriggerAbility(AbilityRunner runner)
     {
-        var ability = InstantiateAbility(runner);
-        ability.transform.parent = runner.transform;
-
-        Debug.Log("Cooldown is: " + originSO.Cooldown);
+        _abilityGO = InstantiateAbility(runner);
+        _abilityGO.transform.parent = runner.transform;
     }
 
     public override void Run()
     {
         base.Run();
-        Debug.Log("Casting Melee Attack!");
+        _abilityGO.SetActive(true);
     }
 }
 
