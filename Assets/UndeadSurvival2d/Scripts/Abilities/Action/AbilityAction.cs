@@ -1,5 +1,6 @@
-﻿using Eincode.UndeadSurvival2d.Character;
-using UnityEngine;
+﻿using UnityEngine;
+using Eincode.UndeadSurvival2d.Character;
+using Eincode.UndeadSurvival2d.Manager;
 
 
 
@@ -9,6 +10,18 @@ namespace Eincode.UndeadSurvival2d.Abilities.Action
     public class AbilityAction : MonoBehaviour
     {
         public LayerMask CollideWith;
+
+        private SpriteRenderer _sprite;
+
+        private void Start()
+        {
+            _sprite = GetComponent<SpriteRenderer>();
+        }
+
+        private void Update()
+        {
+            _sprite.flipX = GameManager.Instance.GetPlayer().GetFlipX();
+        }
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
