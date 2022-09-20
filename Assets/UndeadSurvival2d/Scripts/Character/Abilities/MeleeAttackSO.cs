@@ -3,6 +3,7 @@
 using UnityEngine;
 using Eincode.UndeadSurvival2d.Abilities;
 using Eincode.UndeadSurvival2d.Abilities.Scriptable;
+using System;
 
 [CreateAssetMenu(
     fileName = "MeleeAttackSO",
@@ -18,7 +19,7 @@ public class MeleeAttackSO : AbilitySO
 
 public class MeleeAttack : Ability
 {
-    private GameObject _abilityGO;
+    private Action ActivateAbility;
 
     public override void Awake(AbilityRunner runner)
     {
@@ -28,14 +29,21 @@ public class MeleeAttack : Ability
 
     public override void TriggerAbility(AbilityRunner runner)
     {
-        _abilityGO = InstantiateAbility(runner);
-        _abilityGO.transform.parent = runner.transform;
+        var abilityGO = InstantiateAbility(runner);
+        abilityGO.transform.parent = runner.transform;
+
+        ActivateAbility = () => OnAbilityActiovation(abilityGO);
     }
 
     public override void Run()
     {
         base.Run();
-        _abilityGO.SetActive(true);
+        ActivateAbility();
+    }
+
+    private void OnAbilityActiovation(GameObject abilityGO)
+    {
+        abilityGO.SetActive(true);
     }
 }
 
