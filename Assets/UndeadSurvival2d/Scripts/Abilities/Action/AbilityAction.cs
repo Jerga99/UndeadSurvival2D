@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Eincode.UndeadSurvival2d.Character;
+using UnityEngine;
 
 
 
@@ -13,7 +14,10 @@ namespace Eincode.UndeadSurvival2d.Abilities.Action
         {
             if ((CollideWith.value & 1 << collision.transform.gameObject.layer) > 0)
             {
-                Debug.Log("Attack has landed!");
+                if (collision.TryGetComponent<Damageable>(out var damageable))
+                {
+                    damageable.TakeDamage(30);
+                }
             }
         }
     }
