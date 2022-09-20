@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1659144998846253157}
   - component: {fileID: 3222911564023720210}
+  - component: {fileID: 5635329675669568085}
   - component: {fileID: 6787044713859860995}
   - component: {fileID: 1809680905649749832}
-  - component: {fileID: 5635329675669568085}
   m_Layer: 0
   m_Name: MeleeAttack
   m_TagString: Untagged
@@ -87,6 +87,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5635329675669568085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7829502221116847059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84b341f94e9554ec3a83af027428a987, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollideWith:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!95 &6787044713859860995
 Animator:
   serializedVersion: 4
@@ -123,15 +138,3 @@ CircleCollider2D:
   m_Offset: {x: 0.64, y: 0.28}
   serializedVersion: 2
   m_Radius: 1.8089753
---- !u!114 &5635329675669568085
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7829502221116847059}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84b341f94e9554ec3a83af027428a987, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
