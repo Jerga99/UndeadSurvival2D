@@ -12,10 +12,14 @@ namespace Eincode.UndeadSurvival2d.Abilities.Action
         public LayerMask CollideWith;
 
         private SpriteRenderer _sprite;
+        private Collider2D _collider;
 
         private void Start()
         {
             _sprite = GetComponent<SpriteRenderer>();
+            _collider = GetComponent<Collider2D>();
+
+            _collider.enabled = false;
         }
 
         private void Update()
