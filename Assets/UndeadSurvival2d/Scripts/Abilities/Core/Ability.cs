@@ -2,6 +2,7 @@
 
 using UnityEngine;
 using Eincode.UndeadSurvival2d.Abilities.Scriptable;
+using Eincode.UndeadSurvival2d.Abilities.Action;
 
 namespace Eincode.UndeadSurvival2d.Abilities
 {
@@ -47,6 +48,9 @@ namespace Eincode.UndeadSurvival2d.Abilities
                 runner.transform.position,
                 Quaternion.identity
             );
+
+            var action = go.GetComponent<AbilityAction>();
+            action.abilitySO = originSO;
 
             return go;
         }

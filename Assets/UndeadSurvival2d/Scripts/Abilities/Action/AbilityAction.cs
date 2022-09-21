@@ -1,15 +1,13 @@
 ﻿using UnityEngine;
 using Eincode.UndeadSurvival2d.Character;
 using Eincode.UndeadSurvival2d.Manager;
-
-
-
+using Eincode.UndeadSurvival2d.Abilities.Scriptable;
 
 namespace Eincode.UndeadSurvival2d.Abilities.Action
 {
     public class AbilityAction : MonoBehaviour
     {
-        public LayerMask CollideWith;
+        public AbilitySO abilitySO;
 
         private SpriteRenderer _sprite;
         private Collider2D _collider;
@@ -39,7 +37,7 @@ namespace Eincode.UndeadSurvival2d.Abilities.Action
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if ((CollideWith.value & 1 << collision.transform.gameObject.layer) > 0)
+            if ((abilitySO.CollideWith.value & 1 << collision.transform.gameObject.layer) > 0)
             {
                 if (collision.TryGetComponent<Damageable>(out var damageable))
                 {

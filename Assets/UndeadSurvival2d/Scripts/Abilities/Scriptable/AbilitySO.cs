@@ -6,8 +6,9 @@ namespace Eincode.UndeadSurvival2d.Abilities.Scriptable
 {
     public abstract class AbilitySO : ScriptableObject
     {
-        public GameObject AbilityPrefab;
         public string Name;
+        public GameObject AbilityPrefab;
+        public LayerMask CollideWith;
 
         public float Cooldown => _cooldown.RuntimeValue;
 

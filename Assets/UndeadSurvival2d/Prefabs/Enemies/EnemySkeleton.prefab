@@ -78,5 +78,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 9c61f6158a9ac4c83a0c8d100d4856da,
         type: 2}
+    - target: {fileID: 6714431553381430090, guid: d56c6924536bd4b748911b528b35817e,
+        type: 3}
+      propertyPath: FlashDamageColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6714431553381430090, guid: d56c6924536bd4b748911b528b35817e,
+        type: 3}
+      propertyPath: FlashDamageColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6714431553381430090, guid: d56c6924536bd4b748911b528b35817e,
+        type: 3}
+      propertyPath: FlashDamageColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6714431553381430090, guid: d56c6924536bd4b748911b528b35817e,
+        type: 3}
+      propertyPath: FlashDamageColor.r
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d56c6924536bd4b748911b528b35817e, type: 3}
