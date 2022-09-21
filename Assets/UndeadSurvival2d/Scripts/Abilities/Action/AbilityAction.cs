@@ -18,13 +18,23 @@ namespace Eincode.UndeadSurvival2d.Abilities.Action
         {
             _sprite = GetComponent<SpriteRenderer>();
             _collider = GetComponent<Collider2D>();
-
-            _collider.enabled = false;
         }
 
         private void Update()
         {
             _sprite.flipX = GameManager.Instance.GetPlayer().GetFlipX();
+        }
+
+        // Reacts to animation event
+        public void OnAbilityActivation()
+        {
+            _collider.enabled = true;
+        }
+
+        // Reacts to animation event
+        public void OnAbilityDeActivation()
+        {
+            _collider.enabled = false;
         }
 
         private void OnTriggerEnter2D(Collider2D collision)
