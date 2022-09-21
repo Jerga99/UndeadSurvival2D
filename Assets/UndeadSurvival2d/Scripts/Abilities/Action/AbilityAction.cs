@@ -41,7 +41,7 @@ namespace Eincode.UndeadSurvival2d.Abilities.Action
             {
                 if (collision.TryGetComponent<Damageable>(out var damageable))
                 {
-                    damageable.TakeDamage(30);
+                    damageable.TakeDamage(abilitySO.Damage);
                 }
             }
         }
