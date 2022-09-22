@@ -9,7 +9,7 @@ namespace Eincode.UndeadSurvival2d.Character
     {
         public Color FlashDamageColor;
         public ParticleSystem ParticleHitEffect;
-        public bool IsDeath => _healthSO.CurrentHealth <= 0;
+        public bool IsDead => _healthSO.CurrentHealth <= 0;
 
         [SerializeField]
         private IntValueSO _initialHealthSO;
@@ -19,6 +19,8 @@ namespace Eincode.UndeadSurvival2d.Character
         private HealthSO _healthSO;
 
         private SpriteFlash _flashDamageEffect;
+        private Animator _animator;
+        private int _deadAnimationId;
 
         private void Awake()
         {
@@ -35,12 +37,14 @@ namespace Eincode.UndeadSurvival2d.Character
         // Use this for initialization
         void Start()
         {
+            _animator = GetComponentInChildren<Animator>();
+            _deadAnimationId = Animator.StringToHash("Dead");
             _flashDamageEffect = GetComponentInChildren<SpriteFlash>();
         }
 
         public void TakeDamage(int damage)
         {
-            if (IsDeath)
+            if (IsDead)
             {
                 Debug.Log("I am death! Leave me alone! (:");
                 return;
@@ -48,7 +52,7 @@ namespace Eincode.UndeadSurvival2d.Character
 
             if (_healthSO.CurrentHealth - damage <= 0)
             {
-                Debug.Log("Death Animation!");
+                _animator.SetTrigger(_deadAnimationId);
             }
 
             _healthSO.InflictDamage(damage);
