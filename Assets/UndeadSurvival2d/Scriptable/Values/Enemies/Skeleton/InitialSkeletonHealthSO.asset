@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0220f7b8e9eb4afea61bce6c3e5325e, type: 3}
   m_Name: InitialSkeletonHealthSO
   m_EditorClassIdentifier: 
-  _initialValue: 10
+  _initialValue: 15

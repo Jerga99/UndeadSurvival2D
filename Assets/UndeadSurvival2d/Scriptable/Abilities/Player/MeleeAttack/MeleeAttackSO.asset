@@ -19,3 +19,4 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   _cooldown: {fileID: 11400000, guid: 1c252a874077d49e29d6fb4c44dc8cfd, type: 2}
+  _damage: {fileID: 11400000, guid: 70a8fac110f5440609853ce9dcdd0350, type: 2}

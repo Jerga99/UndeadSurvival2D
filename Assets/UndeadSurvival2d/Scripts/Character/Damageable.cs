@@ -9,6 +9,7 @@ namespace Eincode.UndeadSurvival2d.Character
     {
         public Color FlashDamageColor;
         public ParticleSystem ParticleHitEffect;
+        public bool IsDeath => _healthSO.CurrentHealth <= 0;
 
         [SerializeField]
         private IntValueSO _initialHealthSO;
@@ -39,6 +40,17 @@ namespace Eincode.UndeadSurvival2d.Character
 
         public void TakeDamage(int damage)
         {
+            if (IsDeath)
+            {
+                Debug.Log("I am death! Leave me alone! (:");
+                return;
+            }
+
+            if (_healthSO.CurrentHealth - damage <= 0)
+            {
+                Debug.Log("Death Animation!");
+            }
+
             _healthSO.InflictDamage(damage);
 
             UIManager.Instance.ShowDamage(damage, transform);
