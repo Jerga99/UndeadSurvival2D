@@ -8,7 +8,10 @@ namespace Eincode.UndeadSurvival2d.StateMachine
     public class State
     {
         public StateSO originSO;
+
         public StateAction[] actions;
+        public StateCondition[] conditions;
+
         public string Name => originSO.Name;
 
         public void OnEnter()
