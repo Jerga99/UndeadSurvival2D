@@ -9,7 +9,13 @@ namespace Eincode.UndeadSurvival2d.Character
     {
         public Color FlashDamageColor;
         public ParticleSystem ParticleHitEffect;
+
         public bool IsDead => _healthSO.CurrentHealth <= 0;
+
+        public int Health => _healthSO.CurrentHealth;
+        public int MaxHealth => _healthSO.MaxHealth;
+
+        public float HealthPercentage => (float)Health / (float)MaxHealth * 100f;
 
         [SerializeField]
         private IntValueSO _initialHealthSO;
