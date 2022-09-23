@@ -4,7 +4,7 @@ using Eincode.UndeadSurvival2d.StateMachine.Scriptable;
 
 namespace Eincode.UndeadSurvival2d.StateMachine
 {
-    abstract public class StateAction
+    abstract public class StateAction : IStateComponent
     {
         public StateActionSO originSO;
 
