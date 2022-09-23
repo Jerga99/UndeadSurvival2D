@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class DestroyOnExitSMB : StateMachineBehaviour
 {
+    public bool DestroyParentGO;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     //override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     //{
@@ -18,7 +19,14 @@ public class DestroyOnExitSMB : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        Destroy(animator.gameObject);
+        if (DestroyParentGO)
+        {
+            Destroy(animator.transform.parent.gameObject);
+        }
+        else
+        {
+            Destroy(animator.gameObject);
+        }
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
