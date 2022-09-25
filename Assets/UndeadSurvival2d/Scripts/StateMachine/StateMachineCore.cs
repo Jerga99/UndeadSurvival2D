@@ -5,6 +5,8 @@ namespace Eincode.UndeadSurvival2d.StateMachine
 {
     public class StateMachineCore : MonoBehaviour
     {
+        public State CurrentState => _states[_currentState];
+
         [SerializeField]
         private StateSO[] _statesSO;
 
@@ -20,13 +22,26 @@ namespace Eincode.UndeadSurvival2d.StateMachine
 
         void Update()
         {
-            var currentState = _states[_currentState];
-            currentState.OnUpdate();
+            CurrentState.OnUpdate();
 
-            if (currentState.CanTransition())
+            if (CurrentState.CanTransition())
             {
-                Debug.Log("Can Transition to New State!");
+                Transition();
             }
+        }
+
+        private void Transition()
+        {
+            Debug.Log("Exiting: " + CurrentState.Name);
+            CurrentState.OnExit();
+            GoToNextState();
+        }
+
+        private void GoToNextState()
+        {
+            _currentState++;
+            Debug.Log("Entering: " + CurrentState.Name);
+            CurrentState.OnEnter();
         }
 
         private void InitialStates()
