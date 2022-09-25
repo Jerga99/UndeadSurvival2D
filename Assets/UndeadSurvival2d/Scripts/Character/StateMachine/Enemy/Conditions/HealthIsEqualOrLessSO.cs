@@ -3,6 +3,7 @@
 using UnityEngine;
 using Eincode.UndeadSurvival2d.StateMachine;
 using Eincode.UndeadSurvival2d.StateMachine.Scriptable;
+using Eincode.UndeadSurvival2d.Character;
 
 [CreateAssetMenu(
     fileName = "HealthIsEqualOrLessSO",
@@ -10,6 +11,8 @@ using Eincode.UndeadSurvival2d.StateMachine.Scriptable;
 )]
 public class HealthIsEqualOrLessSO : StateConditionSO
 {
+    public int HealthPercentage;
+
     public override StateCondition CreateCondition(StateMachineCore stateMachine)
     {
         return new HealthIsEqualOrLess();
@@ -18,7 +21,14 @@ public class HealthIsEqualOrLessSO : StateConditionSO
 
 public class HealthIsEqualOrLess : StateCondition
 {
-    public override void Awake(StateMachineCore stateMachine) { }
+    public HealthIsEqualOrLessSO OriginSO => (HealthIsEqualOrLessSO)originSO;
+
+    private Damageable _damageable;
+
+    public override void Awake(StateMachineCore stateMachine)
+    {
+        _damageable = stateMachine.GetComponent<Damageable>();
+    }
 
     public override void OnEnter() { }
 
@@ -26,7 +36,7 @@ public class HealthIsEqualOrLess : StateCondition
 
     protected override bool Statement()
     {
-        return false;
+        return _damageable.HealthPercentage <= OriginSO.HealthPercentage;
     }
 }
 

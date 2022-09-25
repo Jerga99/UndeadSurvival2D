@@ -31,6 +31,24 @@ namespace Eincode.UndeadSurvival2d.StateMachine
             }
         }
 
+        public bool CanTransition()
+        {
+            bool isMet = false;
+
+            for (var i = 0; i < conditions.Length; i++)
+            {
+                var condition = conditions[i];
+                isMet = condition.IsMet();
+
+                if (!isMet)
+                {
+                    break;
+                }
+            }
+
+            return isMet;
+        }
+
     }
 
 }

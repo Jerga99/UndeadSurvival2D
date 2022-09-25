@@ -22,6 +22,11 @@ namespace Eincode.UndeadSurvival2d.StateMachine
         {
             var currentState = _states[_currentState];
             currentState.OnUpdate();
+
+            if (currentState.CanTransition())
+            {
+                Debug.Log("Can Transition to New State!");
+            }
         }
 
         private void InitialStates()
