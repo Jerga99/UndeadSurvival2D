@@ -24,7 +24,7 @@ namespace Eincode.UndeadSurvival2d.StateMachine
         {
             CurrentState.OnUpdate();
 
-            if (CurrentState.CanTransition())
+            if (CurrentState.CanTransition() && _currentState + 1 != _states.Length)
             {
                 Transition();
             }
