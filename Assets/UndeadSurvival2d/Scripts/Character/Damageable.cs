@@ -25,8 +25,6 @@ namespace Eincode.UndeadSurvival2d.Character
         private HealthSO _healthSO;
 
         private SpriteFlash _flashDamageEffect;
-        private Animator _animator;
-        private int _deadAnimationId;
 
         private void Awake()
         {
@@ -43,8 +41,6 @@ namespace Eincode.UndeadSurvival2d.Character
         // Use this for initialization
         void Start()
         {
-            _animator = GetComponentInChildren<Animator>();
-            _deadAnimationId = Animator.StringToHash("Dead");
             _flashDamageEffect = GetComponentInChildren<SpriteFlash>();
         }
 
@@ -52,13 +48,7 @@ namespace Eincode.UndeadSurvival2d.Character
         {
             if (IsDead)
             {
-                Debug.Log("I am death! Leave me alone! (:");
                 return;
-            }
-
-            if (_healthSO.CurrentHealth - damage <= 0)
-            {
-                _animator.SetTrigger(_deadAnimationId);
             }
 
             _healthSO.InflictDamage(damage);

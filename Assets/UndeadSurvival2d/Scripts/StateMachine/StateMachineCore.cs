@@ -32,7 +32,6 @@ namespace Eincode.UndeadSurvival2d.StateMachine
 
         private void Transition()
         {
-            Debug.Log("Exiting: " + CurrentState.Name);
             CurrentState.OnExit();
             GoToNextState();
         }
@@ -40,7 +39,6 @@ namespace Eincode.UndeadSurvival2d.StateMachine
         private void GoToNextState()
         {
             _currentState++;
-            Debug.Log("Entering: " + CurrentState.Name);
             CurrentState.OnEnter();
         }
 

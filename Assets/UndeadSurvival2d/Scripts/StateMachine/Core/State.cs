@@ -16,7 +16,10 @@ namespace Eincode.UndeadSurvival2d.StateMachine
 
         public void OnEnter()
         {
-            Debug.Log(Name + " was Entered");
+            for (var i = 0; i < actions.Length; i++)
+            {
+                actions[i].OnEnter();
+            }
         }
 
         public void OnExit()
