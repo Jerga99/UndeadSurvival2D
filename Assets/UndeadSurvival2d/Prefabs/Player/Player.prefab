@@ -5329,7 +5329,7 @@ GameObject:
   - component: {fileID: 274070393328565767}
   - component: {fileID: 6732985410455250744}
   - component: {fileID: 6732985410455250887}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
