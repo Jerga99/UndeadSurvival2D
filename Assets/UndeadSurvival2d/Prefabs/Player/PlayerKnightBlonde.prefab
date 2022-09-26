@@ -7,6 +7,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1582976147197378579, guid: 6b6e4e2338b2b41668d09fce13e6bed9,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6732985410455250745, guid: 6b6e4e2338b2b41668d09fce13e6bed9,
+        type: 3}
+      propertyPath: CoinDetectionRange
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 6732985410455250749, guid: 6b6e4e2338b2b41668d09fce13e6bed9,
         type: 3}
       propertyPath: m_RootOrder
