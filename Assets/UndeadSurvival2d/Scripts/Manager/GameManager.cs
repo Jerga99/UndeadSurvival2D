@@ -26,6 +26,11 @@ namespace Eincode.UndeadSurvival2d.Manager
         {
             return _player;
         }
+
+        public Vector3 GetPlayerPosition()
+        {
+            return _player.transform.position;
+        }
     }
 
 
