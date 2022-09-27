@@ -16,11 +16,6 @@ namespace Eincode.UndeadSurvival2d.Character
                 Loot.reward.Drop(this);
             }
         }
-
-        private void Start()
-        {
-            DropLoot();
-        }
     }
 }
 

@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _actionsSO:
   - {fileID: 11400000, guid: cdb30923db6524183a86d4bb1fe816b8, type: 2}
+  - {fileID: 11400000, guid: 5daf706ef72d9432183fdb8c24d3acbe, type: 2}
   _conditionsSO: []
   Name: SkeletonState2
