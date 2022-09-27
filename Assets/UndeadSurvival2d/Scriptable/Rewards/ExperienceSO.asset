@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cbaa9b4ec2144385a9d5e300778a733, type: 3}
   m_Name: ExperienceSO
   m_EditorClassIdentifier: 
-  RewardPrefab: {fileID: 0}
-  experience: 0
+  RewardPrefab: {fileID: 182225205000987646, guid: cee4041434b944209a1943ed4dc4cf2b,
+    type: 3}
+  experience: 10

@@ -117,6 +117,7 @@ GameObject:
   - component: {fileID: 2475561260305359952}
   - component: {fileID: 2475561260305359953}
   - component: {fileID: 6714431553381430090}
+  - component: {fileID: 9189635515917247665}
   - component: {fileID: 2475561260305359955}
   - component: {fileID: 2475561260305359954}
   m_Layer: 6
@@ -188,6 +189,21 @@ MonoBehaviour:
   ParticleHitEffect: {fileID: 0}
   _initialHealthSO: {fileID: 11400000, guid: 5d12ced87addb4e0f82b56df3ab4f310, type: 2}
   _healthSO: {fileID: 0}
+--- !u!114 &9189635515917247665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2475561260305359959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5cc6d9ffdbaa42b4aed6dd64e005047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Loot:
+    reward: {fileID: 11400000, guid: b5bfb73469eb2435884367f4bc8d352a, type: 2}
+    dropChance: 100
 --- !u!70 &2475561260305359955
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
