@@ -50,6 +50,7 @@ namespace Eincode.UndeadSurvival2d.Player
         public void SetExperience(int experience)
         {
             _currentExperienceSO.RuntimeValue += experience;
+            Debug.Log(_currentExperienceSO.RuntimeValue);
         }
 
         private void TargetNearbyItems()

@@ -1,6 +1,7 @@
 ﻿
 
 
+using Eincode.UndeadSurvival2d.Player;
 using UnityEngine;
 
 namespace Eincode.UndeadSurvival2d.Reward.Scriptable
@@ -12,6 +13,11 @@ namespace Eincode.UndeadSurvival2d.Reward.Scriptable
     public class ExperienceRewardSO : RewardSO
     {
         public int experience;
+
+        public override void Apply(PlayerBehaviour player)
+        {
+            player.SetExperience(experience);
+        }
     }
 }
 
