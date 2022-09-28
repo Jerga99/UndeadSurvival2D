@@ -11,6 +11,19 @@ namespace Eincode.UndeadSurvival2d.Player
         private PlayerController _playerController;
         private Animator _animator;
 
+        public int ExperienceToLevel;
+
+        [SerializeField]
+        private IntValueSO _levelSO;
+        [SerializeField]
+        private IntValueSO _currentExperienceSO;
+
+        void Awake()
+        {
+            _levelSO.ResetValue();
+            _currentExperienceSO.ResetValue();
+        }
+
         // Use this for initialization
         new void Start()
         {
@@ -32,6 +45,11 @@ namespace Eincode.UndeadSurvival2d.Player
 
             var speed = Mathf.Round(_playerController.movementBlend * 100f) / 100f;
             _animator.SetFloat("Speed", speed);
+        }
+
+        public void SetExperience(int experience)
+        {
+            _currentExperienceSO.RuntimeValue += experience;
         }
 
         private void TargetNearbyItems()
