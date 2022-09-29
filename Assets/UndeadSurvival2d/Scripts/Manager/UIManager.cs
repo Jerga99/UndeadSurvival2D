@@ -10,6 +10,9 @@ namespace Eincode.UndeadSurvival2d.Manager
         public RectTransform DamageCanvas;
         public GameObject DamageTextPrefab;
 
+        [SerializeField]
+        private ExperienceBar _expBar;
+
         private void Awake()
         {
             if (Instance == null)
@@ -20,6 +23,11 @@ namespace Eincode.UndeadSurvival2d.Manager
             {
                 Destroy(gameObject);
             }
+        }
+
+        public void SetExperience(int exp, int maxExp)
+        {
+            _expBar.SetValue(exp, maxExp);
         }
 
         public void ShowDamage(int damage, Transform target)

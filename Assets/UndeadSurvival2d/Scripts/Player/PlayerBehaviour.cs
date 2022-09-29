@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using Eincode.UndeadSurvival2d.Character;
 using Eincode.UndeadSurvival2d.Reward;
+using Eincode.UndeadSurvival2d.Manager;
 
 namespace Eincode.UndeadSurvival2d.Player
 {
@@ -28,6 +29,9 @@ namespace Eincode.UndeadSurvival2d.Player
         new void Start()
         {
             base.Start();
+
+            UIManager.Instance.SetExperience(0, ExperienceToLevel);
+
             _playerController = GetComponent<PlayerController>();
             _animator = GetComponentInChildren<Animator>();
         }
@@ -50,7 +54,11 @@ namespace Eincode.UndeadSurvival2d.Player
         public void SetExperience(int experience)
         {
             _currentExperienceSO.RuntimeValue += experience;
-            Debug.Log(_currentExperienceSO.RuntimeValue);
+
+            UIManager.Instance.SetExperience(
+                _currentExperienceSO.RuntimeValue,
+                ExperienceToLevel
+            );
         }
 
         private void TargetNearbyItems()
