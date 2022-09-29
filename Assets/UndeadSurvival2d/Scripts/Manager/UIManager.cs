@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using Eincode.UndeadSurvival2d.UI;
+using TMPro;
 
 namespace Eincode.UndeadSurvival2d.Manager
 {
@@ -9,6 +10,7 @@ namespace Eincode.UndeadSurvival2d.Manager
 
         public RectTransform DamageCanvas;
         public GameObject DamageTextPrefab;
+        public TextMeshProUGUI LevelText;
 
         [SerializeField]
         private ExperienceBar _expBar;

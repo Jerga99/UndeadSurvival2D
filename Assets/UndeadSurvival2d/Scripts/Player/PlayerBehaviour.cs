@@ -99,13 +99,6 @@ namespace Eincode.UndeadSurvival2d.Player
                 }
             }
         }
-
-        private void OnGUI()
-        {
-            GUI.Label(new Rect(10, 10, 100, 20), "Level: " + _levelSO.RuntimeValue);
-            GUI.Label(new Rect(10, 30, 100, 20), "Cur Exp: " + _currentExperienceSO.RuntimeValue);
-            GUI.Label(new Rect(10, 50, 100, 20), "Exp to lvl: " + ExperienceToLevel);
-        }
     }
 }
 
