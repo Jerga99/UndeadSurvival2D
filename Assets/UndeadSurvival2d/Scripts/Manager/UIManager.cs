@@ -15,6 +15,9 @@ namespace Eincode.UndeadSurvival2d.Manager
         [SerializeField]
         private ExperienceBar _expBar;
 
+        [SerializeField]
+        private IntValueSO _levelSO;
+
         private void Awake()
         {
             if (Instance == null)
@@ -25,6 +28,11 @@ namespace Eincode.UndeadSurvival2d.Manager
             {
                 Destroy(gameObject);
             }
+        }
+
+        private void Update()
+        {
+            LevelText.text = $"lvl: {_levelSO.RuntimeValue}";
         }
 
         public void SetExperience(int exp, int maxExp)
