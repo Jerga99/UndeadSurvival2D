@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc48038ed187b46dfb019c2f3178d741, type: 3}
   m_Name: GameStateSO
   m_EditorClassIdentifier: 
-  _gameTimeSO: {fileID: 0}
+  _gameTimeSO: {fileID: 11400000, guid: 3b12b47bb02244b6e8ef321d0a183740, type: 2}

@@ -24,6 +24,13 @@ namespace Eincode.UndeadSurvival2d.Manager
             {
                 Destroy(gameObject);
             }
+
+            _gameStateSO.Reset();
+        }
+
+        private void Update()
+        {
+            _gameStateSO.GameTime += Time.deltaTime;
         }
 
         public PlayerBehaviour GetPlayer()

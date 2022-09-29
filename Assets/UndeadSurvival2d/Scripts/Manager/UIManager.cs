@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using Eincode.UndeadSurvival2d.UI;
 using TMPro;
+using Eincode.UndeadSurvival2d.Persistance.Scriptable;
 
 namespace Eincode.UndeadSurvival2d.Manager
 {
@@ -15,6 +16,9 @@ namespace Eincode.UndeadSurvival2d.Manager
 
         [SerializeField]
         private ExperienceBar _expBar;
+
+        [SerializeField]
+        private GameStateSO _gameStateSO;
 
         [SerializeField]
         private IntValueSO _levelSO;
@@ -34,6 +38,7 @@ namespace Eincode.UndeadSurvival2d.Manager
         private void Update()
         {
             LevelText.text = $"lvl: {_levelSO.RuntimeValue}";
+            TimerText.text = $"{_gameStateSO.GameTime}";
         }
 
         public void SetExperience(int exp, int maxExp)
