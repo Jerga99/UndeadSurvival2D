@@ -9,6 +9,18 @@ namespace Eincode.UndeadSurvival2d.Player
     {
         public float CoinDetectionRange;
 
+        public int CurrentExperience
+        {
+            get => _currentExperienceSO.RuntimeValue;
+            set => _currentExperienceSO.RuntimeValue = value;
+        }
+
+        public int Level
+        {
+            get => _levelSO.RuntimeValue;
+            set => _levelSO.RuntimeValue = value;
+        }
+
         private PlayerController _playerController;
         private Animator _animator;
 
@@ -53,10 +65,24 @@ namespace Eincode.UndeadSurvival2d.Player
 
         public void SetExperience(int experience)
         {
-            _currentExperienceSO.RuntimeValue += experience;
+            CurrentExperience += experience;
+
+            if (CurrentExperience >= ExperienceToLevel)
+            {
+                var remainingExp = 0;
+
+                if (CurrentExperience > ExperienceToLevel)
+                {
+                    remainingExp = CurrentExperience - ExperienceToLevel;
+                }
+
+                Level += 1;
+                ExperienceToLevel += (Level * 10);
+                CurrentExperience = remainingExp;
+            }
 
             UIManager.Instance.SetExperience(
-                _currentExperienceSO.RuntimeValue,
+                CurrentExperience,
                 ExperienceToLevel
             );
         }
@@ -72,6 +98,13 @@ namespace Eincode.UndeadSurvival2d.Player
                     item.isTargeted = true;
                 }
             }
+        }
+
+        private void OnGUI()
+        {
+            GUI.Label(new Rect(10, 10, 100, 20), "Level: " + _levelSO.RuntimeValue);
+            GUI.Label(new Rect(10, 30, 100, 20), "Cur Exp: " + _currentExperienceSO.RuntimeValue);
+            GUI.Label(new Rect(10, 50, 100, 20), "Exp to lvl: " + ExperienceToLevel);
         }
     }
 }
