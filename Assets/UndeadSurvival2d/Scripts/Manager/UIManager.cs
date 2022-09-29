@@ -11,6 +11,7 @@ namespace Eincode.UndeadSurvival2d.Manager
         public RectTransform DamageCanvas;
         public GameObject DamageTextPrefab;
         public TextMeshProUGUI LevelText;
+        public TextMeshProUGUI TimerText;
 
         [SerializeField]
         private ExperienceBar _expBar;
