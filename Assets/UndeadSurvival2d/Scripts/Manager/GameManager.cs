@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using Eincode.UndeadSurvival2d.Player;
+using Eincode.UndeadSurvival2d.Persistance.Scriptable;
 
 namespace Eincode.UndeadSurvival2d.Manager
 {
@@ -9,6 +10,9 @@ namespace Eincode.UndeadSurvival2d.Manager
 
         [SerializeField]
         private PlayerBehaviour _player;
+
+        [SerializeField]
+        private GameStateSO _gameStateSO;
 
         private void Awake()
         {
