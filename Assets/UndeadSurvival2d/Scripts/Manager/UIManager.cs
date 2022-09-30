@@ -9,6 +9,18 @@ namespace Eincode.UndeadSurvival2d.Manager
     {
         public static UIManager Instance { get; private set; }
 
+        public string NiceTime
+        {
+            get
+            {
+                var gameTime = _gameStateSO.GameTime;
+                int minutes = Mathf.FloorToInt(gameTime / 60f);
+                int seconds = Mathf.FloorToInt(gameTime - minutes * 60);
+                string niceTime = string.Format("{0:00}:{1:00}", minutes, seconds);
+                return niceTime;
+            }
+        }
+
         public RectTransform DamageCanvas;
         public GameObject DamageTextPrefab;
         public TextMeshProUGUI LevelText;
@@ -38,7 +50,7 @@ namespace Eincode.UndeadSurvival2d.Manager
         private void Update()
         {
             LevelText.text = $"lvl: {_levelSO.RuntimeValue}";
-            TimerText.text = $"{_gameStateSO.GameTime}";
+            TimerText.text = NiceTime;
         }
 
         public void SetExperience(int exp, int maxExp)
