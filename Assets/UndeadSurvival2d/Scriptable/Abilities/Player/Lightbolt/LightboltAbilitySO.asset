@@ -9,14 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e8f80ebe5e294b2b8bc0e3e50ab0d8b, type: 3}
-  m_Name: LightBoltSO
+  m_Script: {fileID: 11500000, guid: 82ad30a887a374756947c1756460f19e, type: 3}
+  m_Name: LightboltAbilitySO
   m_EditorClassIdentifier: 
-  Name: LightBolt
+  Name: Lightbolt
   AbilityPrefab: {fileID: 2055102311959635369, guid: 413081fc53a78a043b38591243616398,
     type: 3}
   CollideWith:
     serializedVersion: 2
     m_Bits: 64
-  _cooldown: {fileID: 11400000, guid: 1c252a874077d49e29d6fb4c44dc8cfd, type: 2}
-  _damage: {fileID: 11400000, guid: 70a8fac110f5440609853ce9dcdd0350, type: 2}
+  _cooldown: {fileID: 11400000, guid: a5fa82ad43d1e42ae901ae485ef9c568, type: 2}
+  _damage: {fileID: 11400000, guid: 123c6b5e519df43f19152017b785b202, type: 2}

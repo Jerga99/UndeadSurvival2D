@@ -57310,7 +57310,7 @@ PrefabInstance:
         type: 3}
       propertyPath: _abilitiesSO.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: d718c7efce7264f80a723a08907da771,
+      objectReference: {fileID: 11400000, guid: 55a4ae22f9caa4da98684e0410611069,
         type: 2}
     - target: {fileID: 3780464420609281651, guid: 87c2fe59d569847f69cfc4db2aa38720,
         type: 3}
