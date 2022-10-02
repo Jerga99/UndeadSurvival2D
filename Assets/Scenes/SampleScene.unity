@@ -57301,6 +57301,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1708320429000144929, guid: 87c2fe59d569847f69cfc4db2aa38720,
+        type: 3}
+      propertyPath: _abilitiesSO.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1708320429000144929, guid: 87c2fe59d569847f69cfc4db2aa38720,
+        type: 3}
+      propertyPath: _abilitiesSO.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: d718c7efce7264f80a723a08907da771,
+        type: 2}
     - target: {fileID: 3780464420609281651, guid: 87c2fe59d569847f69cfc4db2aa38720,
         type: 3}
       propertyPath: m_AnchorMax.x
