@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: LightboltAbilitySO
   m_EditorClassIdentifier: 
   Name: Lightbolt
-  AbilityPrefab: {fileID: 2055102311959635369, guid: 413081fc53a78a043b38591243616398,
+  AbilityPrefab: {fileID: 170865212844685809, guid: e20b4b74ae3f9483ab9d98b12170c399,
     type: 3}
   CollideWith:
     serializedVersion: 2
