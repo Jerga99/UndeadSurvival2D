@@ -41,11 +41,19 @@ namespace Eincode.UndeadSurvival2d.Abilities
             }
         }
 
-        protected virtual GameObject InstantiateAbility()
+        protected virtual GameObject InstantiateAbility(out AbilityAction action)
         {
             var go = Object.Instantiate(originSO.AbilityPrefab);
 
-            var action = go.GetComponent<AbilityAction>();
+            if (go.TryGetComponent(out AbilityAction _action))
+            {
+                action = _action;
+            }
+            else
+            {
+                action = go.AddComponent<AbilityAction>();
+            }
+
             action.abilitySO = originSO;
 
             return go;

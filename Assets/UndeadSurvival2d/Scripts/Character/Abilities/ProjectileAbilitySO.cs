@@ -3,6 +3,7 @@
 using UnityEngine;
 using Eincode.UndeadSurvival2d.Abilities;
 using Eincode.UndeadSurvival2d.Abilities.Scriptable;
+using Eincode.UndeadSurvival2d.Abilities.Action;
 
 [CreateAssetMenu(
     fileName = "ProjectileAbilitySO",
@@ -25,7 +26,7 @@ public class ProjectileAbility : Ability
 
     public override void TriggerAbility()
     {
-        var abilityGO = InstantiateAbility();
+        var abilityGO = InstantiateAbility(out AbilityAction action);
     }
 
     public override void Run()
