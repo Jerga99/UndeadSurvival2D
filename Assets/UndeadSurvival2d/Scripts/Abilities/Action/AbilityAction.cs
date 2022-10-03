@@ -11,16 +11,30 @@ namespace Eincode.UndeadSurvival2d.Abilities.Action
 
         private SpriteRenderer _sprite;
         private Collider2D _collider;
+        private ActionModifier[] _actionModifiers;
 
         private void Start()
         {
             _sprite = GetComponent<SpriteRenderer>();
             _collider = GetComponent<Collider2D>();
+
+            _actionModifiers = new ActionModifier[abilitySO.ActionModifiers.Length];
+
+            for (var i = 0; i < _actionModifiers.Length; i++)
+            {
+                var modifier = abilitySO.ActionModifiers[i].GetActionModifier(this);
+                _actionModifiers[i] = modifier;
+            }
         }
 
         private void Update()
         {
             _sprite.flipX = GameManager.Instance.GetPlayer().GetFlipX();
+
+            foreach (var modifier in _actionModifiers)
+            {
+                modifier.Update(this);
+            }
         }
 
         // Reacts to animation event
