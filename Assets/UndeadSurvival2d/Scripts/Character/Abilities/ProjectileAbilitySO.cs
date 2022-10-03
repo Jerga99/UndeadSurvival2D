@@ -23,16 +23,16 @@ public class ProjectileAbility : Ability
         base.Awake(runner);
     }
 
-    public override void TriggerAbility(AbilityRunner runner)
+    public override void TriggerAbility()
     {
-        var abilityGO = InstantiateAbility(runner);
-        abilityGO.transform.parent = runner.transform;
+        var abilityGO = InstantiateAbility();
     }
 
     public override void Run()
     {
         base.Run();
         Debug.Log("Casting Projectile!");
+        TriggerAbility();
     }
 }
 

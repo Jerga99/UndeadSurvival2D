@@ -20,17 +20,20 @@ public class MeleeAttackSO : AbilitySO
 public class MeleeAttack : Ability
 {
     private Action ActivateAbility;
+    private Transform _source;
 
     public override void Awake(AbilityRunner runner)
     {
         base.Awake(runner);
-        TriggerAbility(runner);
+        _source = runner.transform;
+        TriggerAbility();
     }
 
-    public override void TriggerAbility(AbilityRunner runner)
+    public override void TriggerAbility()
     {
-        var abilityGO = InstantiateAbility(runner);
-        abilityGO.transform.parent = runner.transform;
+        var abilityGO = InstantiateAbility();
+        abilityGO.transform.parent = _source;
+        abilityGO.transform.localPosition = Vector3.zero;
 
         ActivateAbility = () => OnAbilityActiovation(abilityGO);
     }
