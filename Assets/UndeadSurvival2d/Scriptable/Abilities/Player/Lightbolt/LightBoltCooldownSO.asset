@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34f07679344e9491da85716b4305fab3, type: 3}
   m_Name: LightBoltCooldownSO
   m_EditorClassIdentifier: 
-  _initialValue: 1
+  _initialValue: 0.5

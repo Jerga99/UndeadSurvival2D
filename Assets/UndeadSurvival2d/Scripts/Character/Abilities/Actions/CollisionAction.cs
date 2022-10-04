@@ -12,6 +12,11 @@ public class CollisionAction : AbilityAction
             if (collision.TryGetComponent<Damageable>(out var damageable))
             {
                 damageable.TakeDamage(abilitySO.Damage);
+
+                if (abilitySO.DestroyOnCollision)
+                {
+                    Destroy(gameObject);
+                }
             }
         }
     }

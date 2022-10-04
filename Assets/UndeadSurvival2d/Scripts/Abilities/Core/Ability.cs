@@ -13,6 +13,7 @@ namespace Eincode.UndeadSurvival2d.Abilities
         public float overallCooldown;
         public float currentCooldown;
 
+        public bool DestroyOnCollision => originSO.DestroyOnCollision;
         public ActionModifierSO[] ActionModifiers => originSO.ActionModifiers;
         public bool IsCooldownPending => currentCooldown != 0;
 
