@@ -8,6 +8,7 @@ namespace Eincode.UndeadSurvival2d.Abilities.Action
     public class AbilityAction : MonoBehaviour
     {
         public AbilitySO abilitySO;
+        public Vector3 direction;
 
         private SpriteRenderer _sprite;
         private Collider2D _collider;
