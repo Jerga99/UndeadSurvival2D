@@ -52,6 +52,11 @@ namespace Eincode.UndeadSurvival2d.Abilities.Action
             _collider.enabled = false;
         }
 
+        public void DestroyAction()
+        {
+            Destroy(gameObject);
+        }
+
         private void OnTriggerEnter2D(Collider2D collision)
         {
             if ((abilitySO.CollideWith.value & 1 << collision.transform.gameObject.layer) > 0)

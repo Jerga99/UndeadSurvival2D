@@ -29,6 +29,16 @@ public class MoveToRandomPosition : ActionModifier
             action.direction = Random.insideUnitCircle.normalized;
             action.transform.rotation = RotateAction(action);
         }
+
+        var distanceDelta = Time.deltaTime * 2.0f;
+        action.transform.position += action.direction * distanceDelta;
+        action.currentDistance += distanceDelta;
+
+        if (action.currentDistance > action.range)
+        {
+            action.DestroyAction();
+        }
+
     }
 
     private Quaternion RotateAction(AbilityAction action)
