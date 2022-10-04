@@ -9,6 +9,8 @@ namespace Eincode.UndeadSurvival2d.Abilities.Action
     {
         public AbilitySO abilitySO;
         public Vector3 direction;
+        public float range;
+        public float currentDistance;
 
         private SpriteRenderer _sprite;
         private Collider2D _collider;
