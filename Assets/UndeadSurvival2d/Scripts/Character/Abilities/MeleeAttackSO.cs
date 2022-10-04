@@ -1,10 +1,9 @@
 ﻿
 
 using UnityEngine;
+using System;
 using Eincode.UndeadSurvival2d.Abilities;
 using Eincode.UndeadSurvival2d.Abilities.Scriptable;
-using System;
-using Eincode.UndeadSurvival2d.Abilities.Action;
 
 [CreateAssetMenu(
     fileName = "MeleeAttackSO",
@@ -18,7 +17,7 @@ public class MeleeAttackSO : AbilitySO
     }
 }
 
-public class MeleeAttack : Ability
+public class MeleeAttack : Ability<MeleeAttackAction>
 {
     private Action ActivateAbility;
     private Transform _source;
@@ -32,7 +31,7 @@ public class MeleeAttack : Ability
 
     public override void TriggerAbility()
     {
-        var abilityGO = InstantiateAbility(out AbilityAction action);
+        var abilityGO = InstantiateAbility(out MeleeAttackAction action);
 
         abilityGO.transform.parent = _source;
         abilityGO.transform.localPosition = Vector3.zero;

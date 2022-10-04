@@ -3,7 +3,6 @@
 using UnityEngine;
 using Eincode.UndeadSurvival2d.Abilities;
 using Eincode.UndeadSurvival2d.Abilities.Scriptable;
-using Eincode.UndeadSurvival2d.Abilities.Action;
 
 [CreateAssetMenu(
     fileName = "ProjectileAbilitySO",
@@ -19,7 +18,7 @@ public class ProjectileAbilitySO : AbilitySO
     }
 }
 
-public class ProjectileAbility : Ability
+public class ProjectileAbility : Ability<CollisionAction>
 {
     public ProjectileAbilitySO OriginSO => (ProjectileAbilitySO)originSO;
     private Transform _source;
@@ -32,7 +31,7 @@ public class ProjectileAbility : Ability
 
     public override void TriggerAbility()
     {
-        var abilityGO = InstantiateAbility(out AbilityAction action);
+        var abilityGO = InstantiateAbility(out CollisionAction action);
         abilityGO.transform.position = _source.position;
 
         action.range = OriginSO.Range;

@@ -42,29 +42,32 @@ namespace Eincode.UndeadSurvival2d.Abilities
             }
         }
 
-        protected virtual GameObject InstantiateAbility(out AbilityAction action)
+
+        private void StartCooldown()
+        {
+            currentCooldown = overallCooldown;
+        }
+    }
+
+    public abstract class Ability<T> : Ability where T : AbilityAction
+    {
+        protected virtual GameObject InstantiateAbility(out T action)
         {
             var go = Object.Instantiate(originSO.AbilityPrefab);
 
-            if (go.TryGetComponent(out AbilityAction _action))
+            if (go.TryGetComponent(out T _action))
             {
                 action = _action;
             }
             else
             {
-                action = go.AddComponent<AbilityAction>();
+                action = go.AddComponent<T>();
             }
 
             action.abilitySO = originSO;
 
             return go;
         }
-
-        private void StartCooldown()
-        {
-            currentCooldown = overallCooldown;
-        }
-
     }
 }
 
