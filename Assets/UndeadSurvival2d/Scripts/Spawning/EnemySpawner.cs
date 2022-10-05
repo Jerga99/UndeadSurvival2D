@@ -63,11 +63,33 @@ namespace Eincode.UndeadSurvival2d.Spawning
 
         private Vector2 GetRandPositionBeyoundMap()
         {
+            float spawnX;
+            float spawnY;
+
             SpawnSide side = _spawnSides[Random.Range(0, _spawnSides.Length)];
 
-            Debug.Log(side);
+            if (side == SpawnSide.Top)
+            {
+                spawnX = Random.Range(0, 1f);
+                spawnY = Random.Range(1f, 1f);
+            }
+            else if (side == SpawnSide.Right)
+            {
+                spawnX = Random.Range(1f, 1f);
+                spawnY = Random.Range(0, 1f);
+            }
+            else if (side == SpawnSide.Bottom)
+            {
+                spawnX = Random.Range(0, 1f);
+                spawnY = Random.Range(0, 0);
+            }
+            else
+            {
+                spawnX = Random.Range(0, 0);
+                spawnY = Random.Range(0, 1f);
+            }
 
-            return Vector2.one;
+            return UnityEngine.Camera.main.ViewportToWorldPoint(new Vector3(spawnX, spawnY));
         }
     }
 }
