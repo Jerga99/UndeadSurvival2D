@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2475561259913696321}
   - component: {fileID: 2475561259913696320}
   - component: {fileID: 2475561259913696323}
+  - component: {fileID: 404004143367135256}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -105,6 +106,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &404004143367135256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2475561259913696326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73d8a6431ae4d418487e6e05feadf79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Duration: 0.2
+  flashMaterial: {fileID: 2100000, guid: 5bf282dde312e428eab7a26eae8e8a42, type: 2}
 --- !u!1 &2475561260305359959
 GameObject:
   m_ObjectHideFlags: 0
@@ -157,7 +172,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isFacingLeft: 0
   CollisionTag: Player
-  DamageInterval: 2
+  DamageInterval: 1
 --- !u!114 &2475561260305359953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,9 +200,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f64aa2066d05844a0b886e300c99fea5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FlashDamageColor: {r: 0, g: 0, b: 0, a: 0}
+  FlashDamageColor: {r: 1, g: 1, b: 1, a: 1}
   ParticleHitEffect: {fileID: 0}
-  _initialHealthSO: {fileID: 11400000, guid: 5d12ced87addb4e0f82b56df3ab4f310, type: 2}
+  _initialHealthSO: {fileID: 11400000, guid: 9c61f6158a9ac4c83a0c8d100d4856da, type: 2}
   _healthSO: {fileID: 0}
 --- !u!114 &9189635515917247665
 MonoBehaviour:
