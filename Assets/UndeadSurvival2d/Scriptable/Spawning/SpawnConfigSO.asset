@@ -15,6 +15,8 @@ MonoBehaviour:
   SpawnIntervalTime: 1
   Waves:
   - EntityToSpawn: {fileID: 11400000, guid: 91dc53158c2734f318281dc50e83e172, type: 2}
+    RoundTime: 3
+  - EntityToSpawn: {fileID: 11400000, guid: 91dc53158c2734f318281dc50e83e172, type: 2}
     RoundTime: 5
   - EntityToSpawn: {fileID: 11400000, guid: 91dc53158c2734f318281dc50e83e172, type: 2}
     RoundTime: 10
