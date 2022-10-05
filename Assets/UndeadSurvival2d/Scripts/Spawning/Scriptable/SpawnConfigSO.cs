@@ -14,7 +14,7 @@ namespace Eincode.UndeadSurvival2d.Spawning.Scriptable
         [Serializable]
         public struct SpawnConfig
         {
-            public GameObject EnemyPrefab;
+            public SpawnableEnemySO EntityToSpawn;
             public float RoundTime;
         }
     }

@@ -12,5 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47a8336b221e94df6a9c4376b30276db, type: 3}
   m_Name: SpawnConfigSO
   m_EditorClassIdentifier: 
-  SpawnIntervalTime: 0
-  Waves: []
+  SpawnIntervalTime: 1
+  Waves:
+  - EntityToSpawn: {fileID: 11400000, guid: 91dc53158c2734f318281dc50e83e172, type: 2}
+    RoundTime: 5
+  - EntityToSpawn: {fileID: 11400000, guid: 91dc53158c2734f318281dc50e83e172, type: 2}
+    RoundTime: 10
