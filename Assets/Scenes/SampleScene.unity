@@ -56370,6 +56370,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e95762b5a6da24bac875681cd0cdb5a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpawnRange: 0.5
   _spawnConfigSO: {fileID: 11400000, guid: 092ac9a8ebb04496c9bf215c1c08cc30, type: 2}
   _gameStateSO: {fileID: 11400000, guid: 0140f36f7bc564fe1b049956b657f955, type: 2}
 --- !u!4 &1456981480

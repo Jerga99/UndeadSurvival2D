@@ -11,6 +11,9 @@ namespace Eincode.UndeadSurvival2d.Spawning
 
     public class EnemySpawner : MonoBehaviour
     {
+        [Range(0, 5)]
+        public float SpawnRange;
+
         public SpawnConfigSO.SpawnConfig Wave => _spawnConfigSO.Waves[_gameStateSO.GameStage];
         public bool SpawnTick => _spawnIntervalDelta >= _spawnConfigSO.SpawnIntervalTime;
 
@@ -70,22 +73,22 @@ namespace Eincode.UndeadSurvival2d.Spawning
 
             if (side == SpawnSide.Top)
             {
-                spawnX = Random.Range(0, 1f);
-                spawnY = Random.Range(1f, 1f);
+                spawnX = Random.Range(0 - SpawnRange, 1f + SpawnRange);
+                spawnY = Random.Range(1f, 1f + SpawnRange);
             }
             else if (side == SpawnSide.Right)
             {
-                spawnX = Random.Range(1f, 1f);
+                spawnX = Random.Range(1f, 1f + SpawnRange);
                 spawnY = Random.Range(0, 1f);
             }
             else if (side == SpawnSide.Bottom)
             {
-                spawnX = Random.Range(0, 1f);
-                spawnY = Random.Range(0, 0);
+                spawnX = Random.Range(0 - SpawnRange, 1f + SpawnRange);
+                spawnY = Random.Range(0, 0 - SpawnRange);
             }
             else
             {
-                spawnX = Random.Range(0, 0);
+                spawnX = Random.Range(0 - SpawnRange, 0);
                 spawnY = Random.Range(0, 1f);
             }
 
