@@ -9,10 +9,19 @@ namespace Eincode.UndeadSurvival2d.Persistance.Scriptable
         [SerializeField]
         private FloatValueSO _gameTimeSO;
 
+        [SerializeField]
+        private IntValueSO _gameStageSO;
+
         public float GameTime
         {
             get => _gameTimeSO.RuntimeValue;
             set => _gameTimeSO.RuntimeValue = value;
+        }
+
+        public int GameStage
+        {
+            get => _gameStageSO.RuntimeValue;
+            set => _gameStageSO.RuntimeValue = value;
         }
 
         public override void Reset()
