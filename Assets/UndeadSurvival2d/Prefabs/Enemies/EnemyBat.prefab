@@ -9,6 +9,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2475561259913696320, guid: d56c6924536bd4b748911b528b35817e,
         type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2475561259913696320, guid: d56c6924536bd4b748911b528b35817e,
+        type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 17f992cc1cc9e45fe9b43df9aa7eb03d,
@@ -18,6 +23,18 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 9b5320c8f4126422f97b3015aa399ffc, type: 2}
+    - target: {fileID: 2475561260305359953, guid: d56c6924536bd4b748911b528b35817e,
+        type: 3}
+      propertyPath: _statesSO.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 72d02dba166114c8ab66316272be2c94,
+        type: 2}
+    - target: {fileID: 2475561260305359953, guid: d56c6924536bd4b748911b528b35817e,
+        type: 3}
+      propertyPath: _statesSO.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 3cb53ad007529474693bf3f9c1cfb9ef,
+        type: 2}
     - target: {fileID: 2475561260305359955, guid: d56c6924536bd4b748911b528b35817e,
         type: 3}
       propertyPath: m_Size.x
@@ -98,5 +115,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyBat
       objectReference: {fileID: 0}
+    - target: {fileID: 6714431553381430090, guid: d56c6924536bd4b748911b528b35817e,
+        type: 3}
+      propertyPath: _initialHealthSO
+      value: 
+      objectReference: {fileID: 11400000, guid: d0be34efb32c7454e8dc21f16c8f8fe8,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d56c6924536bd4b748911b528b35817e, type: 3}

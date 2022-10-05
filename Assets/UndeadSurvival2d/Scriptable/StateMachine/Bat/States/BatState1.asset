@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 35976d569b784431cb22f90ce56174af, type: 3}
-  m_Name: SkeletonState1
+  m_Name: BatState1
   m_EditorClassIdentifier: 
   _actionsSO:
-  - {fileID: 11400000, guid: 03553d9c893b1407184222f6a237781b, type: 2}
+  - {fileID: 11400000, guid: 5d7ff61c1ded74cde8076165de0b5ec4, type: 2}
   - {fileID: 11400000, guid: ab55b6eaf56984abc8ff9d056f5e8a5f, type: 2}
   _conditionsSO:
   - {fileID: 11400000, guid: e6ee70bd9b3fe4709ae37ec5da903cea, type: 2}
-  Name: SkeletonState1
+  Name: BatState1
