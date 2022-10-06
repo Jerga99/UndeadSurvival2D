@@ -18,6 +18,23 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 492ae51cb3e694dc28add4a0d1408bd9, type: 2}
+    - target: {fileID: 2475561260305359952, guid: d56c6924536bd4b748911b528b35817e,
+        type: 3}
+      propertyPath: CollisionDamage
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2475561260305359953, guid: d56c6924536bd4b748911b528b35817e,
+        type: 3}
+      propertyPath: _statesSO.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: dbbd4c4db12d54ed8b44153438ba1f02,
+        type: 2}
+    - target: {fileID: 2475561260305359953, guid: d56c6924536bd4b748911b528b35817e,
+        type: 3}
+      propertyPath: _statesSO.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 87b3c16394af344bdbc3503f3b6096a5,
+        type: 2}
     - target: {fileID: 2475561260305359955, guid: d56c6924536bd4b748911b528b35817e,
         type: 3}
       propertyPath: m_Size.x
@@ -98,5 +115,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyGolem
       objectReference: {fileID: 0}
+    - target: {fileID: 6714431553381430090, guid: d56c6924536bd4b748911b528b35817e,
+        type: 3}
+      propertyPath: _initialHealthSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 4b24c39677411404293b0414a1372a92,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d56c6924536bd4b748911b528b35817e, type: 3}

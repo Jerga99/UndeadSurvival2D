@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35976d569b784431cb22f90ce56174af, type: 3}
+  m_Name: GolemState1
+  m_EditorClassIdentifier: 
+  _actionsSO:
+  - {fileID: 11400000, guid: cf70dffc928dc43a1945ce9b213b8f6f, type: 2}
+  - {fileID: 11400000, guid: ab55b6eaf56984abc8ff9d056f5e8a5f, type: 2}
+  _conditionsSO:
+  - {fileID: 11400000, guid: e6ee70bd9b3fe4709ae37ec5da903cea, type: 2}
+  Name: GolemState1
