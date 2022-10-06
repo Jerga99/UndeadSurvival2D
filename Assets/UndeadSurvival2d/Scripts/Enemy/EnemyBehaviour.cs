@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 using Eincode.UndeadSurvival2d.Character;
 
 namespace Eincode.UndeadSurvival2d.Enemy
@@ -8,6 +7,7 @@ namespace Eincode.UndeadSurvival2d.Enemy
     {
         public string CollisionTag;
         public float DamageInterval;
+        public int CollisionDamage;
 
         private Damageable _closeTarget;
         private float _damageTimer;
@@ -26,7 +26,7 @@ namespace Eincode.UndeadSurvival2d.Enemy
 
                 if (_damageTimer >= DamageInterval)
                 {
-                    _closeTarget.TakeDamage(10);
+                    _closeTarget.TakeDamage(CollisionDamage);
                     _damageTimer = 0;
                 }
             }

@@ -23,6 +23,11 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 9b5320c8f4126422f97b3015aa399ffc, type: 2}
+    - target: {fileID: 2475561260305359952, guid: d56c6924536bd4b748911b528b35817e,
+        type: 3}
+      propertyPath: CollisionDamage
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 2475561260305359953, guid: d56c6924536bd4b748911b528b35817e,
         type: 3}
       propertyPath: _statesSO.Array.data[0]
