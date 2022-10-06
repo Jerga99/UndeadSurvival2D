@@ -5463,6 +5463,7 @@ MonoBehaviour:
   ParticleHitEffect: {fileID: 5523653078901781384}
   _initialHealthSO: {fileID: 11400000, guid: ca2f71834323d408fb2b4feb23295575, type: 2}
   _healthSO: {fileID: 11400000, guid: 10d53b838c1f347f88d6380958674b6f, type: 2}
+  _playerDeadEvent: {fileID: 11400000, guid: 68d1f987d79c044aa85a9f7e7df90df7, type: 2}
 --- !u!70 &6732985410455250744
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

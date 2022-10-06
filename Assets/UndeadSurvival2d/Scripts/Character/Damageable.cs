@@ -24,6 +24,10 @@ namespace Eincode.UndeadSurvival2d.Character
         [Header("Set only for Player")]
         private HealthSO _healthSO;
 
+        [Header("Channeling")]
+        [SerializeField]
+        private VoidEventChannelSO _playerDeadEvent;
+
         private SpriteFlash _flashDamageEffect;
 
         private void Awake()
@@ -49,6 +53,14 @@ namespace Eincode.UndeadSurvival2d.Character
             if (IsDead)
             {
                 return;
+            }
+
+            if (_healthSO.CurrentHealth - damage <= 0)
+            {
+                if (_playerDeadEvent != null)
+                {
+                    _playerDeadEvent.RaiseEvent();
+                }
             }
 
             _healthSO.InflictDamage(damage);

@@ -14,6 +14,20 @@ namespace Eincode.UndeadSurvival2d.Manager
         [SerializeField]
         private GameStateSO _gameStateSO;
 
+        [Header("Listening")]
+        [SerializeField]
+        private VoidEventChannelSO _playerDeadEvent;
+
+        private void OnEnable()
+        {
+            _playerDeadEvent.OnEventRaised += HandleLooseCase;
+        }
+
+        private void OnDisable()
+        {
+            _playerDeadEvent.OnEventRaised -= HandleLooseCase;
+        }
+
         private void Awake()
         {
             if (Instance == null)
@@ -41,6 +55,11 @@ namespace Eincode.UndeadSurvival2d.Manager
         public Vector3 GetPlayerPosition()
         {
             return _player.transform.position;
+        }
+
+        private void HandleLooseCase()
+        {
+            Debug.Log("Game is Lost!");
         }
     }
 
