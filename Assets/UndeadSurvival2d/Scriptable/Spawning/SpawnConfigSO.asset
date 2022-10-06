@@ -17,6 +17,6 @@ MonoBehaviour:
   - EntityToSpawn: {fileID: 11400000, guid: 91dc53158c2734f318281dc50e83e172, type: 2}
     RoundTime: 3
   - EntityToSpawn: {fileID: 11400000, guid: 65ae952f7a675438086d70c84570b202, type: 2}
-    RoundTime: 10
-  - EntityToSpawn: {fileID: 11400000, guid: 91dc53158c2734f318281dc50e83e172, type: 2}
+    RoundTime: 5
+  - EntityToSpawn: {fileID: 11400000, guid: 753a2b96c5c2b4567a4dd3a174e963ec, type: 2}
     RoundTime: 10
