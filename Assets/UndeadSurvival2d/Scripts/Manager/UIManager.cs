@@ -3,6 +3,7 @@ using Eincode.UndeadSurvival2d.UI;
 using TMPro;
 using Eincode.UndeadSurvival2d.Persistance.Scriptable;
 using System.Threading.Tasks;
+using UnityEngine.UI;
 
 namespace Eincode.UndeadSurvival2d.Manager
 {
@@ -26,6 +27,8 @@ namespace Eincode.UndeadSurvival2d.Manager
         public GameObject DamageTextPrefab;
         public TextMeshProUGUI LevelText;
         public TextMeshProUGUI TimerText;
+        public Image DeathOverlay;
+        public Button QuitButton;
 
         [SerializeField]
         private ExperienceBar _expBar;
@@ -76,8 +79,18 @@ namespace Eincode.UndeadSurvival2d.Manager
             while (progress <= 0.5f)
             {
                 progress += 0.01f;
+
+                DeathOverlay.color = new Color(
+                    DeathOverlay.color.r,
+                    DeathOverlay.color.g,
+                    DeathOverlay.color.b,
+                    progress
+                );
+
                 await Task.Delay(10);
             }
+
+            QuitButton.gameObject.SetActive(true);
         }
     }
 }
