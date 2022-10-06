@@ -69,6 +69,7 @@ namespace Eincode.UndeadSurvival2d.Manager
 
         private async void HandleLooseCase()
         {
+            _gameStateSO.IsGameOver = true;
             await UIManager.Instance.DisplayLooseScreen();
             PauseGame();
         }

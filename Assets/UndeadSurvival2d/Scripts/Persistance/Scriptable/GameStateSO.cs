@@ -12,6 +12,15 @@ namespace Eincode.UndeadSurvival2d.Persistance.Scriptable
         [SerializeField]
         private IntValueSO _gameStageSO;
 
+        [SerializeField]
+        private BoolValueSO _isGameOver;
+
+        public bool IsGameOver
+        {
+            get => _isGameOver.RuntimeValue;
+            set => _isGameOver.RuntimeValue = value;
+        }
+
         public float GameTime
         {
             get => _gameTimeSO.RuntimeValue;
@@ -27,6 +36,8 @@ namespace Eincode.UndeadSurvival2d.Persistance.Scriptable
         public override void Reset()
         {
             _gameTimeSO.ResetValue();
+            _gameStageSO.ResetValue();
+            _isGameOver.ResetValue();
         }
     }
 }

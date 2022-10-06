@@ -5433,6 +5433,7 @@ MonoBehaviour:
   _levelSO: {fileID: 11400000, guid: a9370805a1a0140ac966855da178c077, type: 2}
   _currentExperienceSO: {fileID: 11400000, guid: 4ef0da46201e74a549bdc30e39ed4026,
     type: 2}
+  _gameStateSO: {fileID: 11400000, guid: 0140f36f7bc564fe1b049956b657f955, type: 2}
 --- !u!114 &1657486888104345751
 MonoBehaviour:
   m_ObjectHideFlags: 0

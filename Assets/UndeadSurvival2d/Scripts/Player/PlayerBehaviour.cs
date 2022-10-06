@@ -2,6 +2,7 @@
 using Eincode.UndeadSurvival2d.Character;
 using Eincode.UndeadSurvival2d.Reward;
 using Eincode.UndeadSurvival2d.Manager;
+using Eincode.UndeadSurvival2d.Persistance.Scriptable;
 
 namespace Eincode.UndeadSurvival2d.Player
 {
@@ -31,6 +32,9 @@ namespace Eincode.UndeadSurvival2d.Player
         [SerializeField]
         private IntValueSO _currentExperienceSO;
 
+        [SerializeField]
+        private GameStateSO _gameStateSO;
+
         void Awake()
         {
             _levelSO.ResetValue();
@@ -51,6 +55,11 @@ namespace Eincode.UndeadSurvival2d.Player
         // Update is called once per frame
         void Update()
         {
+            if (_gameStateSO.IsGameOver)
+            {
+                return;
+            }
+
             TargetNearbyItems();
 
             if (_playerController.movementInput.x < 0 && !isFacingLeft ||

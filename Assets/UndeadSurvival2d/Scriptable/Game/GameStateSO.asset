@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _gameTimeSO: {fileID: 11400000, guid: 3b12b47bb02244b6e8ef321d0a183740, type: 2}
   _gameStageSO: {fileID: 11400000, guid: 71d0e860adbae4027bb4c3073c6aecce, type: 2}
+  _isGameOver: {fileID: 11400000, guid: 2e41a070409f6448da0225eb76e519c5, type: 2}
