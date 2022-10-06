@@ -57,8 +57,10 @@ namespace Eincode.UndeadSurvival2d.Manager
             return _player.transform.position;
         }
 
-        private void HandleLooseCase()
+        private async void HandleLooseCase()
         {
+            await UIManager.Instance.DisplayLooseScreen();
+            Debug.Log("Display buttons and so on...");
             Debug.Log("Game is Lost!");
         }
     }

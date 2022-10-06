@@ -2,6 +2,7 @@
 using Eincode.UndeadSurvival2d.UI;
 using TMPro;
 using Eincode.UndeadSurvival2d.Persistance.Scriptable;
+using System.Threading.Tasks;
 
 namespace Eincode.UndeadSurvival2d.Manager
 {
@@ -64,6 +65,19 @@ namespace Eincode.UndeadSurvival2d.Manager
             var damageDisplay = damageGO.GetComponent<DamageDisplay>();
 
             damageDisplay.ShowDamage(damage, target, DamageCanvas);
+        }
+
+
+
+        public async Task DisplayLooseScreen()
+        {
+            var progress = 0f;
+
+            while (progress <= 0.5f)
+            {
+                progress += 0.01f;
+                await Task.Delay(10);
+            }
         }
     }
 }
