@@ -7,11 +7,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1582976147197378579, guid: 6b6e4e2338b2b41668d09fce13e6bed9,
+    - target: {fileID: 1657486888104345751, guid: 6b6e4e2338b2b41668d09fce13e6bed9,
         type: 3}
-      propertyPath: m_SortingOrder
-      value: 10
+      propertyPath: _abilitiesSO.Array.size
+      value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1657486888104345751, guid: 6b6e4e2338b2b41668d09fce13e6bed9,
+        type: 3}
+      propertyPath: _abilitiesSO.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 55a4ae22f9caa4da98684e0410611069,
+        type: 2}
     - target: {fileID: 3801978950970783429, guid: 6b6e4e2338b2b41668d09fce13e6bed9,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -21,11 +27,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6732985410455250745, guid: 6b6e4e2338b2b41668d09fce13e6bed9,
-        type: 3}
-      propertyPath: CoinDetectionRange
-      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 6732985410455250749, guid: 6b6e4e2338b2b41668d09fce13e6bed9,
         type: 3}
@@ -87,10 +88,5 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerKnightBlonde
       objectReference: {fileID: 0}
-    - target: {fileID: 8594420623320700728, guid: 6b6e4e2338b2b41668d09fce13e6bed9,
-        type: 3}
-      propertyPath: flashMaterial
-      value: 
-      objectReference: {fileID: 2100000, guid: 5bf282dde312e428eab7a26eae8e8a42, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b6e4e2338b2b41668d09fce13e6bed9, type: 3}
