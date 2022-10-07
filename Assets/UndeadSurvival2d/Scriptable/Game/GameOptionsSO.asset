@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43df15380e24c44759b9fbf93407fcd8, type: 3}
   m_Name: GameOptionsSO
   m_EditorClassIdentifier: 
-  HeroChoice: {fileID: 0}
+  heroChoice: {fileID: 0}

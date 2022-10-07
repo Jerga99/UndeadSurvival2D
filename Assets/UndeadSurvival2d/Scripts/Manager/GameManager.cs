@@ -9,6 +9,8 @@ namespace Eincode.UndeadSurvival2d.Manager
     {
         public static GameManager Instance { get; private set; }
 
+        public GameObject FallbackPlayerPrefab;
+
         [SerializeField]
         private PlayerBehaviour _player;
 
@@ -43,7 +45,10 @@ namespace Eincode.UndeadSurvival2d.Manager
                 Destroy(gameObject);
             }
 
-            var playerPrefab = _gameOptionsSO.heroChoice;
+            var playerPrefab = _gameOptionsSO.heroChoice == null ?
+                FallbackPlayerPrefab :
+                _gameOptionsSO.heroChoice;
+
             var camera = UnityEngine.Camera.main.GetComponent<FollowCamera>();
             var playerGO = Instantiate(playerPrefab, Vector2.zero, Quaternion.identity);
 
