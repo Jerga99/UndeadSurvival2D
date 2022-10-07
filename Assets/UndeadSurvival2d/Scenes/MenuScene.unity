@@ -600,7 +600,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 105239937}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 320313582}
+        m_TargetAssemblyTypeName: Eincode.UndeadSurvival2d.Manager.MenuManager, Assembly-CSharp
+        m_MethodName: OpenMenu
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1781748367}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &105239937
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -870,6 +882,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InitialOpen: {fileID: 626498452}
+  _gameOptionsSO: {fileID: 11400000, guid: af8433236c4594e97ab16d59ba0fe317, type: 2}
 --- !u!4 &320313583
 Transform:
   m_ObjectHideFlags: 0
@@ -1531,7 +1544,20 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 851222229}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 320313582}
+        m_TargetAssemblyTypeName: Eincode.UndeadSurvival2d.Manager.MenuManager, Assembly-CSharp
+        m_MethodName: SelectHero
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 6757054639182045064, guid: 87c2fe59d569847f69cfc4db2aa38720,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &851222229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1775,7 +1801,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1371519249}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 320313582}
+        m_TargetAssemblyTypeName: Eincode.UndeadSurvival2d.Manager.MenuManager, Assembly-CSharp
+        m_MethodName: OpenMenu
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 626498452}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1371519249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2044,7 +2082,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1781748368
 RectTransform:
   m_ObjectHideFlags: 0

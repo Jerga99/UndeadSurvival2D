@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using Eincode.UndeadSurvival2d.Persistance.Scriptable;
 
 namespace Eincode.UndeadSurvival2d.Manager
 {
@@ -7,6 +8,9 @@ namespace Eincode.UndeadSurvival2d.Manager
         public static MenuManager Instance { get; private set; }
 
         public GameObject InitialOpen;
+
+        [SerializeField]
+        private GameOptionsSO _gameOptionsSO;
 
         private GameObject _openMenu;
 
@@ -48,6 +52,11 @@ namespace Eincode.UndeadSurvival2d.Manager
 
             _openMenu.SetActive(false);
             _openMenu = null;
+        }
+
+        public void SelectHero(GameObject hero)
+        {
+            _gameOptionsSO.heroChoice = hero;
         }
     }
 }
