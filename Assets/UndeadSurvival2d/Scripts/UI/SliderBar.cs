@@ -8,11 +8,6 @@ namespace Eincode.UndeadSurvival2d.UI
     {
         public Slider Slider;
 
-        void Start()
-        {
-            SetValue(100, 100);
-        }
-
         public void SetValue(float value, float maxValue)
         {
             Slider.value = value;
