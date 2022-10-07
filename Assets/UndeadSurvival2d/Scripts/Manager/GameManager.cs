@@ -2,6 +2,7 @@
 using Eincode.UndeadSurvival2d.Player;
 using Eincode.UndeadSurvival2d.Persistance.Scriptable;
 using Eincode.UndeadSurvival2d.Camera;
+using UnityEngine.SceneManagement;
 
 namespace Eincode.UndeadSurvival2d.Manager
 {
@@ -81,6 +82,12 @@ namespace Eincode.UndeadSurvival2d.Manager
         public void ResumeGame()
         {
             Time.timeScale = 1;
+        }
+
+        public void GoToMenu()
+        {
+            SceneManager.LoadScene("MenuScene");
+            ResumeGame();
         }
 
         private async void HandleLooseCase()
