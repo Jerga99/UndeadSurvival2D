@@ -15,7 +15,9 @@ namespace Eincode.UndeadSurvival2d.Character
 
         public void Flip()
         {
-            isFacingLeft = _sprite.flipX = !_sprite.flipX;
+            var scale = _sprite.transform.localScale;
+            _sprite.transform.localScale = new Vector3(-scale.x, scale.y, scale.z);
+            isFacingLeft = !isFacingLeft;
         }
 
         public bool GetFlipX()
