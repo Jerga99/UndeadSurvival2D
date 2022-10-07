@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using Eincode.UndeadSurvival2d.Player;
 using Eincode.UndeadSurvival2d.Persistance.Scriptable;
+using Eincode.UndeadSurvival2d.Camera;
 
 namespace Eincode.UndeadSurvival2d.Manager
 {
@@ -13,6 +14,9 @@ namespace Eincode.UndeadSurvival2d.Manager
 
         [SerializeField]
         private GameStateSO _gameStateSO;
+
+        [SerializeField]
+        private GameOptionsSO _gameOptionsSO;
 
         [Header("Listening")]
         [SerializeField]
@@ -38,6 +42,13 @@ namespace Eincode.UndeadSurvival2d.Manager
             {
                 Destroy(gameObject);
             }
+
+            var playerPrefab = _gameOptionsSO.heroChoice;
+            var camera = UnityEngine.Camera.main.GetComponent<FollowCamera>();
+            var playerGO = Instantiate(playerPrefab, Vector2.zero, Quaternion.identity);
+
+            camera.FollowTo = playerGO.transform;
+            _player = playerGO.GetComponent<PlayerBehaviour>();
 
             _gameStateSO.Reset();
         }

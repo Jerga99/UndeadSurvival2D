@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using Eincode.UndeadSurvival2d.Persistance.Scriptable;
+using UnityEngine.SceneManagement;
 
 namespace Eincode.UndeadSurvival2d.Manager
 {
@@ -57,6 +58,7 @@ namespace Eincode.UndeadSurvival2d.Manager
         public void SelectHero(GameObject hero)
         {
             _gameOptionsSO.heroChoice = hero;
+            SceneManager.LoadScene("GameScene");
         }
     }
 }

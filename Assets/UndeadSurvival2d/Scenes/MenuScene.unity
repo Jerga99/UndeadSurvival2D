@@ -206,7 +206,20 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7464396}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 320313582}
+        m_TargetAssemblyTypeName: Eincode.UndeadSurvival2d.Manager.MenuManager, Assembly-CSharp
+        m_MethodName: SelectHero
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1284546036894945228, guid: 76340126192284f7781d32f57de5bb3f,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &7464396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1108,7 +1121,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Hero 1
+  m_text: Knight Blonde
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7f45df20c6fc7409d8297db470fe8b85, type: 2}
   m_sharedMaterial: {fileID: -9210630741606422808, guid: 7f45df20c6fc7409d8297db470fe8b85,
@@ -1136,8 +1149,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32
-  m_fontSizeBase: 32
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1281,7 +1294,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Hero 2
+  m_text: Knight Armored
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7f45df20c6fc7409d8297db470fe8b85, type: 2}
   m_sharedMaterial: {fileID: -9210630741606422808, guid: 7f45df20c6fc7409d8297db470fe8b85,
@@ -1309,8 +1322,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32
-  m_fontSizeBase: 32
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
