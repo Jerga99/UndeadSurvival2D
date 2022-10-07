@@ -35,7 +35,19 @@ namespace Eincode.UndeadSurvival2d.Manager
             }
 
             menu.SetActive(true);
+            CloseCurrentMenu();
             _openMenu = menu;
+        }
+
+        public void CloseCurrentMenu()
+        {
+            if (_openMenu == null)
+            {
+                return;
+            }
+
+            _openMenu.SetActive(false);
+            _openMenu = null;
         }
     }
 }
