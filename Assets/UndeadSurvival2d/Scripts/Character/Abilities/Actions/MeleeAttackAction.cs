@@ -16,7 +16,29 @@ public class MeleeAttackAction : CollisionAction
     protected override void Update()
     {
         base.Update();
-        _sprite.flipX = GameManager.Instance.GetPlayer().GetFlipX();
+
+        var playerDirection = GameManager.Instance.GetPlayer().GetPlayerDirection();
+        var scale = _sprite.transform.localScale;
+
+        if (playerDirection != GetDirection())
+        {
+            _sprite.transform.localScale = new Vector3(-scale.x, scale.y, scale.z);
+        }
+
+    }
+
+    public int GetDirection()
+    {
+        if (_sprite.transform.localScale.x >= 0)
+        {
+            // Right
+            return +1;
+        }
+        else
+        {
+            // Left
+            return -1;
+        }
     }
 }
 

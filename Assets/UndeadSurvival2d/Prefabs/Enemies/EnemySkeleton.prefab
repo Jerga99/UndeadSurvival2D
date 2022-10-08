@@ -12,6 +12,16 @@ PrefabInstance:
       propertyPath: CollisionDamage
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 2475561260305359955, guid: d56c6924536bd4b748911b528b35817e,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.081023574
+      objectReference: {fileID: 0}
+    - target: {fileID: 2475561260305359955, guid: d56c6924536bd4b748911b528b35817e,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.026781738
+      objectReference: {fileID: 0}
     - target: {fileID: 2475561260305359958, guid: d56c6924536bd4b748911b528b35817e,
         type: 3}
       propertyPath: m_RootOrder

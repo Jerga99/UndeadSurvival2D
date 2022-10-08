@@ -24,6 +24,20 @@ namespace Eincode.UndeadSurvival2d.Character
         {
             return _sprite.flipX;
         }
+
+        public int GetPlayerDirection()
+        {
+            if (_sprite.transform.localScale.x >= 0)
+            {
+                // Right
+                return +1;
+            }
+            else
+            {
+                // Left
+                return -1;
+            }
+        }
     }
 }
 
