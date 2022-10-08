@@ -19,11 +19,13 @@ namespace Eincode.UndeadSurvival2d.Player
         private void OnEnable()
         {
             _inputReader.MoveEvent += OnMoveEvent;
+            _inputReader.EvadeEvent += OnEvadeEvent;
         }
 
         private void OnDisable()
         {
             _inputReader.MoveEvent -= OnMoveEvent;
+            _inputReader.EvadeEvent -= OnEvadeEvent;
         }
 
         // Update is called once per frame
@@ -56,6 +58,11 @@ namespace Eincode.UndeadSurvival2d.Player
         private void OnMoveEvent(Vector2 move)
         {
             movementInput = move;
+        }
+
+        private void OnEvadeEvent(bool isEvading)
+        {
+            Debug.Log("Is Evading: " + isEvading);
         }
     }
 }

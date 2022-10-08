@@ -13,6 +13,11 @@ namespace Eincode.UndeadSurvival2d.Input
         {
             _inputReader.OnMove(value.Get<Vector2>());
         }
+
+        public void OnEvade(InputValue value)
+        {
+            _inputReader.OnEvade(value.isPressed);
+        }
     }
 }
 
