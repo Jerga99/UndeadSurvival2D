@@ -4,6 +4,13 @@ using System.Collections.Generic;
 
 namespace Eincode.UndeadSurvival2d.Abilities
 {
+    public enum AbilityStatus
+    {
+        IsReady,
+        IsOnCooldown,
+        NotFound
+    }
+
     public class AbilityRunner : MonoBehaviour
     {
         [SerializeField]
@@ -37,10 +44,33 @@ namespace Eincode.UndeadSurvival2d.Abilities
             }
         }
 
+        public AbilityStatus GetAbility(string name, out Ability ability)
+        {
+            ability = FindAbility(name);
+
+            if (ability == null)
+            {
+                return AbilityStatus.NotFound;
+            }
+            else if (ability.IsCooldownPending)
+            {
+                return AbilityStatus.IsOnCooldown;
+            }
+            else
+            {
+                return AbilityStatus.IsReady;
+            }
+        }
+
         private void PrepareAbility(AbilitySO abilitySO)
         {
             var ability = abilitySO.GetAbility(this);
             _abilities.Add(ability);
+        }
+
+        private Ability FindAbility(string name)
+        {
+            return _abilities.Find((ability) => ability.originSO.Name == name);
         }
     }
 

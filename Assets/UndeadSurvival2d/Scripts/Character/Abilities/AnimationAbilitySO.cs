@@ -38,7 +38,6 @@ public class AnimationAbility : Ability
     public override void TriggerAbility()
     {
         _animator.SetTrigger(_animId);
-        Debug.Log("Triggering Animation of Evade");
     }
 
     public override void Run()

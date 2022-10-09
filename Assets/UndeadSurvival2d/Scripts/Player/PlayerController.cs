@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
-using System.Collections;
 using Eincode.UndeadSurvival2d.Input;
+using Eincode.UndeadSurvival2d.Abilities;
 
 namespace Eincode.UndeadSurvival2d.Player
 {
@@ -16,6 +16,8 @@ namespace Eincode.UndeadSurvival2d.Player
         [SerializeField]
         private InputReader _inputReader;
 
+        private AbilityRunner _abilityRunner;
+
         private void OnEnable()
         {
             _inputReader.MoveEvent += OnMoveEvent;
@@ -28,7 +30,11 @@ namespace Eincode.UndeadSurvival2d.Player
             _inputReader.EvadeEvent -= OnEvadeEvent;
         }
 
-        // Update is called once per frame
+        private void Start()
+        {
+            _abilityRunner = GetComponent<AbilityRunner>();
+        }
+
         void Update()
         {
             ComputeMovement();
@@ -62,7 +68,24 @@ namespace Eincode.UndeadSurvival2d.Player
 
         private void OnEvadeEvent(bool isEvading)
         {
-            Debug.Log("Is Evading: " + isEvading);
+            if (isEvading)
+            {
+                AbilityStatus status = _abilityRunner.GetAbility("Evade", out var ability);
+
+                if (status == AbilityStatus.IsReady)
+                {
+                    Debug.Log("Ability Casted!");
+                    ability.Run();
+                }
+                else if (status == AbilityStatus.IsOnCooldown)
+                {
+                    Debug.Log($"{ability.originSO.Name} is on cooldown");
+                }
+                else
+                {
+                    Debug.Log("Ability is not found");
+                }
+            }
         }
     }
 }
