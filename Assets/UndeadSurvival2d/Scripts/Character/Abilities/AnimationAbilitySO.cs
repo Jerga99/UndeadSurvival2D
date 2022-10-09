@@ -1,9 +1,9 @@
 ﻿
 
 using UnityEngine;
-using System;
 using Eincode.UndeadSurvival2d.Abilities;
 using Eincode.UndeadSurvival2d.Abilities.Scriptable;
+using Eincode.UndeadSurvival2d.Player;
 
 [CreateAssetMenu(
     fileName = "AnimationAbilitySO",
@@ -12,7 +12,9 @@ using Eincode.UndeadSurvival2d.Abilities.Scriptable;
 public class AnimationAbilitySO : AbilitySO
 {
     public string AnimationParameter;
+    public float SpeedModifier;
 
+    [Header("Listening")]
     [SerializeField]
     public VoidEventChannelSO _evadeAnimationEvent;
 
@@ -24,7 +26,10 @@ public class AnimationAbilitySO : AbilitySO
 
 public class AnimationAbility : Ability
 {
+    public AnimationAbilitySO OriginSO => (AnimationAbilitySO)base.originSO;
+
     private Animator _animator;
+    private PlayerController _player;
     private int _animId;
 
     public AnimationAbility(string animationParameter, VoidEventChannelSO evadeEvent)
@@ -37,11 +42,13 @@ public class AnimationAbility : Ability
     {
         base.Awake(runner);
         _animator = runner.GetComponentInChildren<Animator>();
+        _player = runner.GetComponent<PlayerController>();
     }
 
     public override void TriggerAbility()
     {
         _animator.SetTrigger(_animId);
+        _player.speedModifier = OriginSO.SpeedModifier;
     }
 
     public override void Run()
@@ -52,7 +59,7 @@ public class AnimationAbility : Ability
 
     private void OnEvadeEventFinished()
     {
-        Debug.Log("Evade Animation Finished!");
+        _player.speedModifier = 1f;
     }
 }
 

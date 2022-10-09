@@ -12,7 +12,7 @@ namespace Eincode.UndeadSurvival2d.Player
         public Vector3 movementVector;
 
         public float movementBlend;
-        public float SpeedModifier = 1f;
+        public float speedModifier;
 
         [SerializeField]
         private InputReader _inputReader;
@@ -34,6 +34,7 @@ namespace Eincode.UndeadSurvival2d.Player
         private void Start()
         {
             _abilityRunner = GetComponent<AbilityRunner>();
+            speedModifier = 1f;
         }
 
         void Update()
@@ -49,7 +50,7 @@ namespace Eincode.UndeadSurvival2d.Player
 
         private void ComputeMovement()
         {
-            float targetSpeed = TargetSpeed * SpeedModifier;
+            float targetSpeed = TargetSpeed * speedModifier;
 
             if (movementInput == Vector2.zero)
             {
@@ -75,7 +76,6 @@ namespace Eincode.UndeadSurvival2d.Player
 
                 if (status == AbilityStatus.IsReady)
                 {
-                    SpeedModifier = 3f;
                     ability.Run();
                 }
                 else if (status == AbilityStatus.IsOnCooldown)

@@ -23,5 +23,6 @@ MonoBehaviour:
   _cooldown: {fileID: 11400000, guid: f03a3836ed54f42a9b0513c19e7a1e74, type: 2}
   _damage: {fileID: 0}
   AnimationParameter: Evade
+  SpeedModifier: 2
   _evadeAnimationEvent: {fileID: 11400000, guid: 8a8ad98f7b070436393f3308d0ea96dd,
     type: 2}
