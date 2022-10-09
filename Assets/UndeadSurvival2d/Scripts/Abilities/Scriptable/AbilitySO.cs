@@ -4,12 +4,18 @@ using UnityEngine;
 
 namespace Eincode.UndeadSurvival2d.Abilities.Scriptable
 {
+    public enum AbilityExecutionType
+    {
+        Automatic, Trigger
+    }
+
     public abstract class AbilitySO : ScriptableObject
     {
         public string Name;
         public GameObject AbilityPrefab;
         public LayerMask CollideWith;
         public bool DestroyOnCollision;
+        public AbilityExecutionType ExecutionType;
         public ActionModifierSO[] ActionModifiers;
 
         public float Cooldown => _cooldown.RuntimeValue;

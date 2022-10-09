@@ -30,7 +30,7 @@ namespace Eincode.UndeadSurvival2d.Abilities
                 {
                     ability.Cooldown();
                 }
-                else
+                else if (ability.originSO.ExecutionType == AbilityExecutionType.Automatic)
                 {
                     ability.Run();
                 }
