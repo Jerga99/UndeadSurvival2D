@@ -13,9 +13,12 @@ public class AnimationAbilitySO : AbilitySO
 {
     public string AnimationParameter;
 
+    [SerializeField]
+    public VoidEventChannelSO _evadeAnimationEvent;
+
     protected override Ability CreateAbility()
     {
-        return new AnimationAbility(AnimationParameter);
+        return new AnimationAbility(AnimationParameter, _evadeAnimationEvent);
     }
 }
 
@@ -24,9 +27,10 @@ public class AnimationAbility : Ability
     private Animator _animator;
     private int _animId;
 
-    public AnimationAbility(string animationParameter)
+    public AnimationAbility(string animationParameter, VoidEventChannelSO evadeEvent)
     {
         _animId = Animator.StringToHash(animationParameter);
+        evadeEvent.OnEventRaised += OnEvadeEventFinished;
     }
 
     public override void Awake(AbilityRunner runner)
@@ -44,6 +48,11 @@ public class AnimationAbility : Ability
     {
         base.Run();
         TriggerAbility();
+    }
+
+    private void OnEvadeEventFinished()
+    {
+        Debug.Log("Evade Animation Finished!");
     }
 }
 
