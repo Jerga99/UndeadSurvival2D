@@ -56222,7 +56222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86c84e0cb838245b5aace472d49f6186, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FallbackPlayerPrefab: {fileID: 1284546036894945228, guid: 76340126192284f7781d32f57de5bb3f,
+  FallbackPlayerPrefab: {fileID: 6757054639182045064, guid: 87c2fe59d569847f69cfc4db2aa38720,
     type: 3}
   _player: {fileID: 0}
   _gameStateSO: {fileID: 11400000, guid: 0140f36f7bc564fe1b049956b657f955, type: 2}

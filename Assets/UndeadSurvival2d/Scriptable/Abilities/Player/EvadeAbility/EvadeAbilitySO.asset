@@ -18,6 +18,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   DestroyOnCollision: 0
+  ExecutionType: 1
   ActionModifiers: []
   _cooldown: {fileID: 11400000, guid: f03a3836ed54f42a9b0513c19e7a1e74, type: 2}
   _damage: {fileID: 0}
