@@ -2,6 +2,7 @@
 using System.Collections;
 using Eincode.UndeadSurvival2d.Utils;
 using Eincode.UndeadSurvival2d.Manager;
+using Eincode.UndeadSurvival2d.Persistance.Scriptable;
 
 namespace Eincode.UndeadSurvival2d.Character
 {
@@ -16,6 +17,11 @@ namespace Eincode.UndeadSurvival2d.Character
         public int MaxHealth => _healthSO.MaxHealth;
 
         public float HealthPercentage => (float)Health / (float)MaxHealth * 100f;
+
+        public int Score;
+
+        [SerializeField]
+        private GameStateSO _gameStateSO;
 
         [SerializeField]
         private IntValueSO _initialHealthSO;
@@ -60,6 +66,15 @@ namespace Eincode.UndeadSurvival2d.Character
                 if (_playerDeadEvent != null)
                 {
                     _playerDeadEvent.RaiseEvent();
+                }
+
+                if (Score > 0)
+                {
+                    _gameStateSO.EnemiesDefeated++;
+                    _gameStateSO.Score += Score;
+
+                    Debug.Log("Enemies Defeated: " + _gameStateSO.EnemiesDefeated);
+                    Debug.Log("Score: " + _gameStateSO.Score);
                 }
             }
 

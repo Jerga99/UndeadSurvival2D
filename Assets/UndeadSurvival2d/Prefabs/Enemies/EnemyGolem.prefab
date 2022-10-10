@@ -117,6 +117,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6714431553381430090, guid: d56c6924536bd4b748911b528b35817e,
         type: 3}
+      propertyPath: Score
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6714431553381430090, guid: d56c6924536bd4b748911b528b35817e,
+        type: 3}
       propertyPath: _initialHealthSO
       value: 
       objectReference: {fileID: 11400000, guid: 4b24c39677411404293b0414a1372a92,
@@ -143,3 +148,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _abilitiesSO:
   - {fileID: 11400000, guid: 61216ec389ead49bf9847dfe4063bb0a, type: 2}
+  _abilityAddEvent: {fileID: 0}

@@ -15,6 +15,24 @@ namespace Eincode.UndeadSurvival2d.Persistance.Scriptable
         [SerializeField]
         private BoolValueSO _isGameOver;
 
+        [SerializeField]
+        private IntValueSO _enemiesDefeatedSO;
+
+        [SerializeField]
+        private IntValueSO _scoreSO;
+
+        public int EnemiesDefeated
+        {
+            get => _enemiesDefeatedSO.RuntimeValue;
+            set => _enemiesDefeatedSO.RuntimeValue = value;
+        }
+
+        public int Score
+        {
+            get => _scoreSO.RuntimeValue;
+            set => _scoreSO.RuntimeValue = value;
+        }
+
         public bool IsGameOver
         {
             get => _isGameOver.RuntimeValue;

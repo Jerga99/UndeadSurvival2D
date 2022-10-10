@@ -173,6 +173,7 @@ MonoBehaviour:
   isFacingLeft: 0
   CollisionTag: Player
   DamageInterval: 1
+  CollisionDamage: 0
 --- !u!114 &2475561260305359953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,8 +203,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FlashDamageColor: {r: 1, g: 1, b: 1, a: 1}
   ParticleHitEffect: {fileID: 0}
+  Score: 1
+  _gameStateSO: {fileID: 11400000, guid: 0140f36f7bc564fe1b049956b657f955, type: 2}
   _initialHealthSO: {fileID: 11400000, guid: 9c61f6158a9ac4c83a0c8d100d4856da, type: 2}
   _healthSO: {fileID: 0}
+  _playerDeadEvent: {fileID: 0}
 --- !u!114 &9189635515917247665
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -122,6 +122,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6714431553381430090, guid: d56c6924536bd4b748911b528b35817e,
         type: 3}
+      propertyPath: Score
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6714431553381430090, guid: d56c6924536bd4b748911b528b35817e,
+        type: 3}
       propertyPath: _initialHealthSO
       value: 
       objectReference: {fileID: 11400000, guid: d0be34efb32c7454e8dc21f16c8f8fe8,
