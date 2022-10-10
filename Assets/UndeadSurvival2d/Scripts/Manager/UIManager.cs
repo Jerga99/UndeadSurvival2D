@@ -31,6 +31,7 @@ namespace Eincode.UndeadSurvival2d.Manager
         public Image DeathOverlay;
         public Button QuitButton;
         public AbilityIcon ActiveAbility;
+        public HealthBar HealthBar;
 
         [SerializeField]
         private ExperienceBar _expBar;
@@ -65,6 +66,8 @@ namespace Eincode.UndeadSurvival2d.Manager
             {
                 Destroy(gameObject);
             }
+
+            HealthBar.followTo = GameManager.Instance.GetPlayer().transform;
         }
 
         private void Update()
