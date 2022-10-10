@@ -5370,6 +5370,7 @@ MonoBehaviour:
   movementInput: {x: 0, y: 0}
   movementVector: {x: 0, y: 0, z: 0}
   movementBlend: 0
+  speedModifier: 0
   _inputReader: {fileID: 11400000, guid: 26a38b2bdc1784e95bef15cf131d2ae2, type: 2}
 --- !u!114 &6732985410455250747
 MonoBehaviour:
@@ -5449,6 +5450,7 @@ MonoBehaviour:
   _abilitiesSO:
   - {fileID: 11400000, guid: 043ea40ac4c3f426cb414e07926e3427, type: 2}
   - {fileID: 11400000, guid: c4b25d773700e48cf936c18df1607bac, type: 2}
+  _abilityAddEvent: {fileID: 11400000, guid: 5d2082f77fe2c4b32babbef3ee7fa807, type: 2}
 --- !u!114 &274070393328565767
 MonoBehaviour:
   m_ObjectHideFlags: 0

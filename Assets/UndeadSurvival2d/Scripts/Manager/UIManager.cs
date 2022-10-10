@@ -4,6 +4,7 @@ using TMPro;
 using Eincode.UndeadSurvival2d.Persistance.Scriptable;
 using System.Threading.Tasks;
 using UnityEngine.UI;
+using Eincode.UndeadSurvival2d.Abilities;
 
 namespace Eincode.UndeadSurvival2d.Manager
 {
@@ -38,6 +39,20 @@ namespace Eincode.UndeadSurvival2d.Manager
 
         [SerializeField]
         private IntValueSO _levelSO;
+
+        [Header("Listening")]
+        [SerializeField]
+        private AbilityEventChannelSO _abilityAddEvent;
+
+        private void OnEnable()
+        {
+            _abilityAddEvent.OnEventRaised += OnAbilityAdded;
+        }
+
+        private void OnDisable()
+        {
+            _abilityAddEvent.OnEventRaised -= OnAbilityAdded;
+        }
 
         private void Awake()
         {
@@ -91,6 +106,11 @@ namespace Eincode.UndeadSurvival2d.Manager
             }
 
             QuitButton.gameObject.SetActive(true);
+        }
+
+        private void OnAbilityAdded(Ability ability)
+        {
+            Debug.Log(ability);
         }
     }
 }

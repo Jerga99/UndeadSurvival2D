@@ -16,6 +16,10 @@ namespace Eincode.UndeadSurvival2d.Abilities
         [SerializeField]
         private AbilitySO[] _abilitiesSO;
 
+        [Header("Channeling")]
+        [SerializeField]
+        private AbilityEventChannelSO _abilityAddEvent;
+
         private List<Ability> _abilities;
 
 
@@ -66,6 +70,11 @@ namespace Eincode.UndeadSurvival2d.Abilities
         {
             var ability = abilitySO.GetAbility(this);
             _abilities.Add(ability);
+
+            if (_abilityAddEvent != null)
+            {
+                _abilityAddEvent.RaiseEvent(ability);
+            }
         }
 
         private Ability FindAbility(string name)

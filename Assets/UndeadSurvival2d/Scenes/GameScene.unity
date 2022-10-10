@@ -57269,6 +57269,7 @@ MonoBehaviour:
   _expBar: {fileID: 18097822}
   _gameStateSO: {fileID: 11400000, guid: 0140f36f7bc564fe1b049956b657f955, type: 2}
   _levelSO: {fileID: 11400000, guid: a9370805a1a0140ac966855da178c077, type: 2}
+  _abilityAddEvent: {fileID: 11400000, guid: 5d2082f77fe2c4b32babbef3ee7fa807, type: 2}
 --- !u!4 &1815078770
 Transform:
   m_ObjectHideFlags: 0
