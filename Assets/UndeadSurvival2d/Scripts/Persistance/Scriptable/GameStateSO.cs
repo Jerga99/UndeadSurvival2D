@@ -56,6 +56,8 @@ namespace Eincode.UndeadSurvival2d.Persistance.Scriptable
             _gameTimeSO.ResetValue();
             _gameStageSO.ResetValue();
             _isGameOver.ResetValue();
+            _scoreSO.ResetValue();
+            _enemiesDefeatedSO.ResetValue();
         }
     }
 }

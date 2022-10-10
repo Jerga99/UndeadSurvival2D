@@ -56604,6 +56604,7 @@ GameObject:
   - component: {fileID: 1130723640}
   - component: {fileID: 1130723642}
   - component: {fileID: 1130723641}
+  - component: {fileID: 1130723643}
   m_Layer: 5
   m_Name: ScoreScreen
   m_TagString: Untagged
@@ -56671,6 +56672,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1130723639}
   m_CullTransparentMesh: 1
+--- !u!114 &1130723643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130723639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3b62af4bacea4f998715b2bb86839da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameStateSO: {fileID: 11400000, guid: 0140f36f7bc564fe1b049956b657f955, type: 2}
+  ScoreText: {fileID: 952476407}
+  EnemiesDefeatedText: {fileID: 1226967831}
 --- !u!4 &1153531835 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3795045364199508836, guid: cee4041434b944209a1943ed4dc4cf2b,
