@@ -22,10 +22,12 @@ namespace Eincode.UndeadSurvival2d.UI
         }
 
         public void InitIcon(
+            Sprite icon,
             Func<float> getOverallCooldown,
             Func<float> getCurrentCooldown
         )
         {
+            GetComponent<Image>().sprite = icon;
             GetOverallCooldown = getOverallCooldown;
             GetCurrentCooldown = getCurrentCooldown;
             enabled = true;

@@ -114,6 +114,7 @@ namespace Eincode.UndeadSurvival2d.Manager
             if (ability.originSO.ExecutionType == Abilities.Scriptable.AbilityExecutionType.Trigger)
             {
                 ActiveAbility.InitIcon(
+                    ability.originSO.AbilityIcon,
                     () => ability.overallCooldown,
                     () => ability.currentCooldown
                 );

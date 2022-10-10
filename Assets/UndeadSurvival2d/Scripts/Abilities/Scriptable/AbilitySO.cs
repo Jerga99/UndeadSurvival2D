@@ -13,6 +13,7 @@ namespace Eincode.UndeadSurvival2d.Abilities.Scriptable
     {
         public string Name;
         public GameObject AbilityPrefab;
+        public Sprite AbilityIcon;
         public LayerMask CollideWith;
         public bool DestroyOnCollision;
         public AbilityExecutionType ExecutionType;
