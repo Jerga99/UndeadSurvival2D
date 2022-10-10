@@ -55127,6 +55127,7 @@ GameObject:
   - component: {fileID: 326547479}
   - component: {fileID: 326547481}
   - component: {fileID: 326547480}
+  - component: {fileID: 326547482}
   m_Layer: 5
   m_Name: AbilityIcon
   m_TagString: Untagged
@@ -55175,7 +55176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 530bcabb1501d8148a19a77465ecac03, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0e7966e8857d9da42bd7ac9668f85ce2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -55193,6 +55194,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 326547478}
   m_CullTransparentMesh: 1
+--- !u!114 &326547482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326547478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1c658c6bd7da48bf87faec79961cb68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CooldownImage: {fileID: 1521149105}
 --- !u!1001 &336535207
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -56819,7 +56833,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
-  m_FillAmount: 0.764
+  m_FillAmount: 0.821
   m_FillClockwise: 0
   m_FillOrigin: 2
   m_UseSpriteMesh: 0
@@ -57266,6 +57280,7 @@ MonoBehaviour:
   TimerText: {fileID: 1684203425}
   DeathOverlay: {fileID: 713027288}
   QuitButton: {fileID: 1927267800}
+  ActiveAbility: {fileID: 326547482}
   _expBar: {fileID: 18097822}
   _gameStateSO: {fileID: 11400000, guid: 0140f36f7bc564fe1b049956b657f955, type: 2}
   _levelSO: {fileID: 11400000, guid: a9370805a1a0140ac966855da178c077, type: 2}

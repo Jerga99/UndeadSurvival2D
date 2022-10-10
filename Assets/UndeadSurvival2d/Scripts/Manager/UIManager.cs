@@ -30,6 +30,7 @@ namespace Eincode.UndeadSurvival2d.Manager
         public TextMeshProUGUI TimerText;
         public Image DeathOverlay;
         public Button QuitButton;
+        public AbilityIcon ActiveAbility;
 
         [SerializeField]
         private ExperienceBar _expBar;
@@ -110,7 +111,13 @@ namespace Eincode.UndeadSurvival2d.Manager
 
         private void OnAbilityAdded(Ability ability)
         {
-            Debug.Log(ability);
+            if (ability.originSO.ExecutionType == Abilities.Scriptable.AbilityExecutionType.Trigger)
+            {
+                ActiveAbility.InitIcon(
+                    () => ability.overallCooldown,
+                    () => ability.currentCooldown
+                );
+            }
         }
     }
 }
