@@ -8,6 +8,7 @@ namespace Eincode.UndeadSurvival2d.Abilities.Action
         public ActionModifierSO originSO;
 
         public abstract void Awake(AbilityAction action);
+        public abstract void OnEnter(AbilityAction action);
         public abstract void Update(AbilityAction action);
     }
 }

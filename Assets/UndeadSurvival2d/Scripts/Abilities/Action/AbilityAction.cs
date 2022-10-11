@@ -24,6 +24,7 @@ namespace Eincode.UndeadSurvival2d.Abilities.Action
             {
                 var modifier = abilitySO.ActionModifiers[i].GetActionModifier(this);
                 _actionModifiers[i] = modifier;
+                modifier.OnEnter(this);
             }
         }
 
@@ -45,6 +46,14 @@ namespace Eincode.UndeadSurvival2d.Abilities.Action
         public virtual void OnAbilityDeActivation()
         {
             _collider.enabled = false;
+        }
+
+        public void PlaySoundEffect()
+        {
+            if (audioSource != null)
+            {
+                audioSource.Play();
+            }
         }
 
         public void DestroyAction()
