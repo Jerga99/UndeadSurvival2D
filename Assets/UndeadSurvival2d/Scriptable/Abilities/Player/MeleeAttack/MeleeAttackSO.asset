@@ -15,8 +15,13 @@ MonoBehaviour:
   Name: MeleeAttack
   AbilityPrefab: {fileID: 7829502221116847059, guid: f3c4b4e97e5404e9e995349e4cb89a38,
     type: 3}
+  AbilityIcon: {fileID: 0}
+  SoundEffect: {fileID: 8300000, guid: 862469e73f1b640bd881ecfd45635a34, type: 3}
   CollideWith:
     serializedVersion: 2
     m_Bits: 64
+  DestroyOnCollision: 0
+  ExecutionType: 0
+  ActionModifiers: []
   _cooldown: {fileID: 11400000, guid: 1c252a874077d49e29d6fb4c44dc8cfd, type: 2}
   _damage: {fileID: 11400000, guid: 70a8fac110f5440609853ce9dcdd0350, type: 2}

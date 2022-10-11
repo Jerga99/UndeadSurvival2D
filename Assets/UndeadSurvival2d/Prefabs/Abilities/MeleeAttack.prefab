@@ -140,6 +140,7 @@ MonoBehaviour:
   direction: {x: 0, y: 0, z: 0}
   range: 0
   currentDistance: 0
+  audioSource: {fileID: 0}
 --- !u!82 &6028875369340323487
 AudioSource:
   m_ObjectHideFlags: 0
@@ -152,7 +153,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0
