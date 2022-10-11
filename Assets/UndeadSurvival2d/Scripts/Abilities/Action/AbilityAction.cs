@@ -9,6 +9,7 @@ namespace Eincode.UndeadSurvival2d.Abilities.Action
         public Vector3 direction;
         public float range;
         public float currentDistance;
+        public AudioSource audioSource;
 
         private Collider2D _collider;
         private ActionModifier[] _actionModifiers;

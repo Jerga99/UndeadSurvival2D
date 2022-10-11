@@ -67,6 +67,20 @@ namespace Eincode.UndeadSurvival2d.Abilities
 
             action.abilitySO = originSO;
 
+            if (originSO.SoundEffect != null)
+            {
+                if (go.TryGetComponent(out AudioSource audioSource))
+                {
+                    action.audioSource = audioSource;
+                }
+                else
+                {
+                    action.audioSource = go.AddComponent<AudioSource>();
+                }
+
+                action.audioSource.clip = originSO.SoundEffect;
+            }
+
             return go;
         }
     }
